@@ -449,6 +449,10 @@ body {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
+  body .justify-center {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
   body .justify-between {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -459,6 +463,8 @@ body {
     text-align: center; }
   body .accent-color {
     color: #dfa82c; }
+  body .hidden {
+    display: none; }
   body main {
     margin-left: 420px;
     width: 100%;
@@ -495,35 +501,84 @@ aside#sidebar {
         height: auto; }
     aside#sidebar header .menu .menu-icon-wrapper {
       height: 30px;
-      cursor: pointer; }
+      width: 40px;
+      cursor: pointer;
+      position: relative; }
       aside#sidebar header .menu .menu-icon-wrapper .bar {
         height: 4px;
-        width: 40px;
+        width: 100%;
         background-color: #F8F8F8;
-        border-radius: 4px; }
+        border-radius: 4px;
+        transition: all 300ms ease-in-out; }
+    aside#sidebar header .menu:hover .bar {
+      background-color: #dfa82c; }
+    aside#sidebar header .menu.opened .bar {
+      position: absolute;
+      top: 50%; }
+    aside#sidebar header .menu.opened .bar:nth-child(2) {
+      display: none; }
+    aside#sidebar header .menu.opened .bar:first-child {
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    aside#sidebar header .menu.opened .bar:last-child {
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
   aside#sidebar .main-content {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    padding: 0 20px; }
-    aside#sidebar .main-content h1 {
-      margin: 0;
-      font-size: 2.8rem; }
-    aside#sidebar .main-content h4 {
-      margin: 0;
-      font-size: 1.5rem; }
-    aside#sidebar .main-content p {
-      letter-spacing: 1.1px;
-      line-height: 1.8rem; }
-    aside#sidebar .main-content .social-container {
-      margin-top: 50px; }
-      aside#sidebar .main-content .social-container a:nth-child(2) {
-        margin: 0 30px; }
-      aside#sidebar .main-content .social-container a img {
-        width: 50px;
-        height: auto; }
+    width: 100%;
+    height: 60%; }
+    aside#sidebar .main-content .blurb {
+      padding: 0 20px; }
+      aside#sidebar .main-content .blurb h1 {
+        margin: 0;
+        font-size: 2.8rem; }
+      aside#sidebar .main-content .blurb h4 {
+        margin: 0;
+        font-size: 1.5rem; }
+      aside#sidebar .main-content .blurb p {
+        letter-spacing: 1.2px;
+        line-height: 1.8rem; }
+        aside#sidebar .main-content .blurb p a:hover {
+          font-weight: bold; }
+      aside#sidebar .main-content .blurb .social-container {
+        margin-top: 50px; }
+        aside#sidebar .main-content .blurb .social-container a:nth-child(2) {
+          margin: 0 30px; }
+        aside#sidebar .main-content .blurb .social-container a img {
+          width: 50px;
+          height: auto; }
+          aside#sidebar .main-content .blurb .social-container a img:hover {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1); }
+    aside#sidebar .main-content nav {
+      height: 100%;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; }
+      aside#sidebar .main-content nav .menu-item.flex {
+        position: relative;
+        cursor: pointer;
+        color: #F8F8F8; }
+        aside#sidebar .main-content nav .menu-item.flex .menu-text {
+          font-size: 2.5rem; }
+        aside#sidebar .main-content nav .menu-item.flex .menu-icon {
+          position: absolute;
+          right: 40px;
+          height: 100%; }
+          aside#sidebar .main-content nav .menu-item.flex .menu-icon svg {
+            height: auto;
+            width: 40px;
+            fill: #F8F8F8; }
+        aside#sidebar .main-content nav .menu-item.flex.active .menu-text, aside#sidebar .main-content nav .menu-item.flex.active .menu-icon svg, aside#sidebar .main-content nav .menu-item.flex:hover .menu-text, aside#sidebar .main-content nav .menu-item.flex:hover .menu-icon svg {
+          color: #dfa82c;
+          fill: #dfa82c; }
   aside#sidebar footer {
     position: absolute;
     bottom: 20px;
