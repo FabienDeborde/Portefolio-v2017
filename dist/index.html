@@ -13,18 +13,19 @@
   </head>
   <body>
     <!-- Sidebar-->
-    <aside id="sidebar">
+    <aside class="retracted" id="sidebar">
+      <input class="hidden" id="toggle" type="checkbox"/>
       <header class="flex v-align-center justify-between"><a class="main-logo" href=""><img src="./assets/img/icons/logo.png" alt="Fabien Deborde's Logo, representing a F and a D surrounded by waves"/></a>
-        <div class="menu opened">
+        <label class="menu" for="toggle">
           <div class="menu-icon-wrapper flex column justify-between">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
           </div>
-        </div>
+        </label>
       </header>
-      <div class="main-content">
-        <div class="blurb hidden">
+      <div class="main-content flex v-align-center">
+        <div class="blurb">
           <h1 class="accent-font text-center">Fabien Deborde</h1>
           <h4 class="accent-font text-center">Web Developer / Lifelong Learner</h4>
           <p>

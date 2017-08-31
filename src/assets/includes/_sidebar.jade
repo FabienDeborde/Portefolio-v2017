@@ -1,15 +1,16 @@
-aside#sidebar
+aside#sidebar.retracted
+  input#toggle.hidden(type="checkbox")
   header.flex.v-align-center.justify-between
     a(href="").main-logo
       img(src="./assets/img/icons/logo.png", alt="Fabien Deborde's Logo, representing a F and a D surrounded by waves")
-    .menu.opened
+    label(for="toggle").menu
       .menu-icon-wrapper.flex.column.justify-between
         .bar
         .bar
         .bar
       
-  .main-content
-    .blurb.hidden
+  .main-content.flex.v-align-center
+    .blurb
       h1.accent-font.text-center Fabien Deborde
       h4.accent-font.text-center Web Developer / Lifelong Learner
       
