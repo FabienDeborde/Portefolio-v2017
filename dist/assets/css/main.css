@@ -468,7 +468,7 @@ body {
   body main {
     margin-left: 420px;
     width: 100%;
-    height: 2000px;
+    height: 4000px;
     background-color: lightblue;
     /* セクションのタイトル　（色、位置、サイズ） */ }
   @media only screen and (max-width: 991px) {
@@ -487,9 +487,13 @@ aside#sidebar {
   width: 420px;
   border-right: 1px solid #F8F8F8;
   position: fixed;
-  height: 100vh; }
+  height: 100vh;
+  transition: all 300ms ease-in-out;
+  left: 0;
+  background-color: #121f32; }
   aside#sidebar header {
-    padding: 20px; }
+    padding: 20px;
+    position: relative; }
     aside#sidebar header .main-logo {
       width: 60px;
       height: 60px;
@@ -593,17 +597,27 @@ aside#sidebar {
     position: absolute;
     bottom: 20px;
     width: 100%; }
-  aside#sidebar.retracted {
-    width: 120px;
-    transition: all 300ms ease-in-out; }
-    aside#sidebar.retracted header .menu,
-    aside#sidebar.retracted .main-content .blurb,
-    aside#sidebar.retracted .main-content nav .menu-item .menu-text,
-    aside#sidebar.retracted footer {
-      display: none; }
-    aside#sidebar.retracted .main-content nav {
+  aside#sidebar.retracted, aside#sidebar:hover {
+    left: -300px; }
+    aside#sidebar.retracted .main-content nav, aside#sidebar:hover .main-content nav {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; }
-    aside#sidebar.retracted + main {
+    aside#sidebar.retracted header .main-logo, aside#sidebar:hover header .main-logo {
+      position: absolute;
+      top: 20px;
+      right: 20px; }
+    aside#sidebar.retracted header .menu,
+    aside#sidebar.retracted .main-content .blurb,
+    aside#sidebar.retracted .main-content nav .menu-item .menu-text,
+    aside#sidebar.retracted footer, aside#sidebar:hover header .menu,
+    aside#sidebar:hover .main-content .blurb,
+    aside#sidebar:hover .main-content nav .menu-item .menu-text,
+    aside#sidebar:hover footer {
+      display: none; }
+    aside#sidebar.retracted + main, aside#sidebar:hover + main {
       margin-left: 120px; }
+
+section#work {
+  height: 1500px;
+  background-color: darkblue; }
