@@ -5,7 +5,7 @@ html(lang="en")
     meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
     meta(http-equiv="X-UA-Compatible", content="ie=edge,chrome=1")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title 
+    title Fabien Deborde | Web Developer / Lifelong Learner
     meta(name="keywords" content="")
       
     link(rel="icon", href="favicon.ico")
@@ -15,18 +15,22 @@ html(lang="en")
       
   body
 
-    //サイドバー
+    // Sidebar
     include ./assets/includes/_sidebar.jade
-    //サイドバー 終
+    // Sidebar (end)
     
     main
+      // Work section
+      include ./assets/includes/_work.jade
+      // Work section (end)  
       
-     
+      // About section
+      include ./assets/includes/_about.jade
+      // About section (end)
       
-    //フッター
-    include ./assets/includes/_footer.jade
-    //フッター　終
-
+      // Contact section
+      include ./assets/includes/_contact.jade
+      // Contact section (end)
    
     //script(src="./assets/js/vendors-dist.js")
     

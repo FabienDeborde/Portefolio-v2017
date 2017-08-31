@@ -432,10 +432,38 @@ body {
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
+  background-color: #121f32;
+  color: #F8F8F8;
   /* 各セクションのメインスタイル */
   /* ９９１px以下のメインフォントサイズ */
   /* ５７５px以下のメインフォントサイズ */ }
-  body main section {
+  body .flex {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  body .column {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  body .v-align-center {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  body .justify-between {
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  body .accent-font {
+    font-family: 'Dekiru', serif; }
+  body .text-center {
+    text-align: center; }
+  body .accent-color {
+    color: #dfa82c; }
+  body main {
+    margin-left: 420px;
+    width: 100%;
+    height: 2000px;
+    background-color: lightblue;
     /* セクションのタイトル　（色、位置、サイズ） */ }
   @media only screen and (max-width: 991px) {
     body {
@@ -444,5 +472,59 @@ body {
     body {
       font-size: 12px; } }
 
-/*ヘッダー
-  header#header */
+a {
+  text-decoration: none;
+  outline: 0; }
+
+/* Sidebar */
+aside#sidebar {
+  width: 420px;
+  border-right: 1px solid #F8F8F8;
+  position: fixed;
+  height: 100vh; }
+  aside#sidebar header {
+    padding: 20px; }
+    aside#sidebar header .main-logo {
+      width: 60px;
+      height: 60px;
+      padding: 10px;
+      border-radius: 50%;
+      background-color: #4170b5; }
+      aside#sidebar header .main-logo img {
+        width: 100%;
+        height: auto; }
+    aside#sidebar header .menu .menu-icon-wrapper {
+      height: 30px;
+      cursor: pointer; }
+      aside#sidebar header .menu .menu-icon-wrapper .bar {
+        height: 4px;
+        width: 40px;
+        background-color: #F8F8F8;
+        border-radius: 4px; }
+  aside#sidebar .main-content {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 20px; }
+    aside#sidebar .main-content h1 {
+      margin: 0;
+      font-size: 2.8rem; }
+    aside#sidebar .main-content h4 {
+      margin: 0;
+      font-size: 1.5rem; }
+    aside#sidebar .main-content p {
+      letter-spacing: 1.1px;
+      line-height: 1.8rem; }
+    aside#sidebar .main-content .social-container {
+      margin-top: 50px; }
+      aside#sidebar .main-content .social-container a:nth-child(2) {
+        margin: 0 30px; }
+      aside#sidebar .main-content .social-container a img {
+        width: 50px;
+        height: auto; }
+  aside#sidebar footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%; }

@@ -1,2 +1,57 @@
-/*ヘッダー
-  header#header
+/* Sidebar
+aside#sidebar
+  width: 420px
+  border-right: 1px solid $white
+  position: fixed
+  height: 100vh
+
+  header
+    padding: 20px
+    .main-logo
+      width: 60px
+      height: 60px
+      padding: 10px
+      border-radius: 50%
+      background-color: lighten($darkBlue, 35)
+      img
+        width: 100%
+        height: auto
+    .menu
+      .menu-icon-wrapper
+        height: 30px
+        cursor: pointer
+        .bar
+          height: 4px
+          width: 40px
+          background-color: $white
+          border-radius: 4px
+
+  .main-content
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    padding: 0 20px
+    h1
+      margin: 0
+      font-size: 2.8rem
+    h4
+      margin: 0
+      font-size: 1.5rem
+
+    p
+      letter-spacing: 1.1px
+      line-height: 1.8rem
+
+    .social-container
+      margin-top: 50px
+      a
+        &:nth-child(2)
+          margin: 0 30px
+        img
+          width: 50px
+          height: auto
+
+  footer
+    position: absolute
+    bottom: 20px
+    width: 100%
