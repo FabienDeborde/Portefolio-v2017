@@ -1,0 +1,80 @@
+section#about
+  background-image: url('../img/photos/about-me.jpg')
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  position: relative
+  font-size: 1.2rem
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  transition: all 400ms ease-in-out
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: transparent
+
+  .circle
+    transition: all 400ms ease-in-out
+    $h: 400px
+    height: $h
+    width: $h
+    border-radius: 50%
+    border: 2px solid $darkBlue
+    box-shadow: 0px 0px 0px 2000px $darkBlue
+    position: absolute
+    top: 0
+    left: 30%
+    z-index: 2
+
+  .about-wrapper
+    position: relative
+    z-index: 1
+    opacity: 0
+    hr
+      position: relative
+      z-index: 100
+      width: 80%
+      border-color: $white
+      margin: 3rem auto
+
+    .wrapper
+      .aboutme p
+        margin: 0.5rem 0
+      .skills
+        margin-bottom: 80px
+        flex-wrap: wrap
+        .skill-wrapper
+          width: 40%
+          margin-bottom: 20px
+          &:nth-child(odd)
+            margin-right: 40px
+          .dots
+            margin: 5px 0
+            .dot
+              $rad: 10px
+              border-radius: 50%
+              height: $rad
+              width: $rad
+              border: 2px solid rgba(255,255,255,0.5)
+              &.active
+                border: 2px solid $orange
+
+  &.unwrapped
+    &::after
+      background-color: rgba(18,31,50, 0.7)
+    .circle
+      transform: scale(6)
+    .about-wrapper
+      opacity: 1
+  &.nojs
+    &::after
+      background-color: rgba(18,31,50, 0.7)
+    .circle
+      transform: scale(6)
+    .about-wrapper
+      opacity: 1
