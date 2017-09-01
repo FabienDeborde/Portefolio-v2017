@@ -1,1 +1,22 @@
-section#contact
+section#contact.flex.justify-center.v-align-center
+  .wrapper
+    .message You have a project and have some questions for me, or maybe you just want to chat and discuss web development?
+      br
+      |Contact me using the form below, or send me a message on the following networks!
+      
+    form
+      .row.flex
+        input(type="text" placeholder="Your name")
+        input(type="email" placeholder="Your email")
+      .row.flex
+        textarea(placeholder="Your message...", rows="6")
+      .row.flex
+        input.btn-bicolor.btn-bicolor-blue#submit(type="submit" value="Send")
+
+    .social-container.flex.justify-center.v-align-center
+      a(href="https://twitter.com/fabiendeborde" target="_blank", title="Twitter")
+        img(src="./assets/img/icons/Twitter.png", alt="Twitter logo")
+      a(href="https://github.com/FabienDeborde" target="_blank", title="GitHub")
+        img(src="./assets/img/icons/GitHub.png", alt="GitHub logo")
+      a(href="https://codepen.io/fabien_d/" target="_blank", title="CodePen")
+        img(src="./assets/img/icons/CodePen.png", alt="CodePen　logo")

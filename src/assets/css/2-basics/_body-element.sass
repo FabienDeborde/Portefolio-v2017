@@ -10,6 +10,10 @@ body
   background-color: $darkBlue
   color: $white
 
+  .wrapper
+    width: 70%
+    margin: auto
+
   .flex
     display: flex
   .column
@@ -32,14 +36,27 @@ body
   .hidden
     display: none
 
+  .social-container
+    margin-top: 50px
+    a
+      &:nth-child(2)
+        margin: 0 30px
+      img
+        width: 50px
+        height: auto
+        &:hover
+          transform: scale(1.1)
+
+
   /* 各セクションのメインスタイル
   main
     margin-left: 420px
-    width: 100%
     height: 4000px
     background-color: lightblue
     section
     /* セクションのタイトル　（色、位置、サイズ）
+
+
 
 
   /* ９９１px以下のメインフォントサイズ

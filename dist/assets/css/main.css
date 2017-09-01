@@ -437,6 +437,9 @@ body {
   /* 各セクションのメインスタイル */
   /* ９９１px以下のメインフォントサイズ */
   /* ５７５px以下のメインフォントサイズ */ }
+  body .wrapper {
+    width: 70%;
+    margin: auto; }
   body .flex {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -465,9 +468,19 @@ body {
     color: #dfa82c; }
   body .hidden {
     display: none; }
+  body .social-container {
+    margin-top: 50px; }
+    body .social-container a:nth-child(2) {
+      margin: 0 30px; }
+    body .social-container a img {
+      width: 50px;
+      height: auto; }
+      body .social-container a img:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1); }
   body main {
     margin-left: 420px;
-    width: 100%;
     height: 4000px;
     background-color: lightblue;
     /* セクションのタイトル　（色、位置、サイズ） */ }
@@ -481,6 +494,42 @@ body {
 a {
   text-decoration: none;
   outline: 0; }
+
+input, textarea {
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border: 1px solid #F8F8F8;
+  border-radius: 4px;
+  outline: none;
+  background-color: transparent;
+  color: #F8F8F8; }
+  input:active, input:focus, textarea:active, textarea:focus {
+    border: 1px solid #dfa82c; }
+  input#submit, textarea#submit {
+    display: block;
+    max-width: 50%;
+    margin: auto;
+    font-family: 'Dekiru';
+    font-size: 2rem;
+    color: #F8F8F8;
+    padding: 1rem 2rem;
+    letter-spacing: 0.1em;
+    transition: all 300ms;
+    cursor: pointer;
+    word-wrap: break-word;
+    white-space: normal;
+    text-transform: uppercase; }
+    input#submit.btn-bicolor:hover, textarea#submit.btn-bicolor:hover {
+      background-color: #F8F8F8;
+      transition-property: background-color;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-out; }
+    input#submit.btn-bicolor-blue, textarea#submit.btn-bicolor-blue {
+      background-color: #121f32; }
+      input#submit.btn-bicolor-blue:hover, textarea#submit.btn-bicolor-blue:hover {
+        color: #121f32;
+        box-shadow: 0px 0px 0px 1px #121f32, 0px 0px 2px 3px rgba(0, 0, 0, 0.1); }
 
 /* Sidebar */
 aside#sidebar {
@@ -556,17 +605,6 @@ aside#sidebar {
         line-height: 1.8rem; }
         aside#sidebar .main-content .blurb p a:hover {
           font-weight: bold; }
-      aside#sidebar .main-content .blurb .social-container {
-        margin-top: 50px; }
-        aside#sidebar .main-content .blurb .social-container a:nth-child(2) {
-          margin: 0 30px; }
-        aside#sidebar .main-content .blurb .social-container a img {
-          width: 50px;
-          height: auto; }
-          aside#sidebar .main-content .blurb .social-container a img:hover {
-            -webkit-transform: scale(1.1);
-            -ms-transform: scale(1.1);
-            transform: scale(1.1); }
     aside#sidebar .main-content nav {
       display: none;
       height: 100%;
@@ -597,27 +635,47 @@ aside#sidebar {
     position: absolute;
     bottom: 20px;
     width: 100%; }
-  aside#sidebar.retracted, aside#sidebar:hover {
+  aside#sidebar.retracted {
     left: -300px; }
-    aside#sidebar.retracted .main-content nav, aside#sidebar:hover .main-content nav {
+    aside#sidebar.retracted .main-content nav {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; }
-    aside#sidebar.retracted header .main-logo, aside#sidebar:hover header .main-logo {
+    aside#sidebar.retracted header .main-logo {
       position: absolute;
       top: 20px;
       right: 20px; }
     aside#sidebar.retracted header .menu,
     aside#sidebar.retracted .main-content .blurb,
     aside#sidebar.retracted .main-content nav .menu-item .menu-text,
-    aside#sidebar.retracted footer, aside#sidebar:hover header .menu,
-    aside#sidebar:hover .main-content .blurb,
-    aside#sidebar:hover .main-content nav .menu-item .menu-text,
-    aside#sidebar:hover footer {
+    aside#sidebar.retracted footer {
       display: none; }
-    aside#sidebar.retracted + main, aside#sidebar:hover + main {
+    aside#sidebar.retracted + main {
       margin-left: 120px; }
 
 section#work {
   height: 1500px;
   background-color: darkblue; }
+
+section#contact {
+  width: 100%;
+  height: 100vh;
+  background-color: #121f32; }
+  section#contact .message {
+    font-size: 1.5rem; }
+  section#contact form {
+    margin: 80px 0;
+    width: 100%; }
+    section#contact form input {
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1; }
+      section#contact form input[type="text"] {
+        margin-right: 20px; }
+      section#contact form input[type="submit"] {
+        width: 50%; }
+    section#contact form textarea {
+      width: 100%;
+      margin: 20px 0 60px 0; }
+  section#contact .social-container.flex.justify-center.v-align-center a img {
+    width: 70px; }

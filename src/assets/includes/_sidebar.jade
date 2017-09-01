@@ -4,7 +4,7 @@ aside#sidebar
     a(href="").main-logo
       img(src="./assets/img/icons/logo.png", alt="Fabien Deborde's Logo, representing a F and a D surrounded by waves")
     label(for="toggle").menu
-      .menu-icon-wrapper.flex.column.justify-between
+      .menu-icon-wrapper.flex.column.justify-between(title="Menu")
         .bar
         .bar
         .bar
@@ -16,21 +16,22 @@ aside#sidebar
       
       p Bonjour ! I'm Fabien, a French Web developer living in Nagoya.
         |Take a look at 
-        a(href="#").accent-color my work 
+        a(href="#", title="Check my work").accent-color my work 
         |  or 
-        a(href="#").accent-color my skills
+        a(href="#", title="Check my skills").accent-color my skills
         | , and if you want to get in touch, feel free to use the 
-        a(href="#").accent-color contact form
+        a(href="#", title="Contact me").accent-color contact form
         | below!
         |You can also follow me on the following networks!
       
       .social-container.text-center
-        a(href="https://twitter.com/fabiendeborde" target="_blank")
+        a(href="https://twitter.com/fabiendeborde" target="_blank", title="Twitter")
           img(src="./assets/img/icons/Twitter.png", alt="Twitter logo")
-        a(href="https://github.com/FabienDeborde" target="_blank")
+        a(href="https://github.com/FabienDeborde" target="_blank", title="GitHub")
           img(src="./assets/img/icons/GitHub.png", alt="GitHub logo")
-        a(href="https://codepen.io/fabien_d/" target="_blank")
+        a(href="https://codepen.io/fabien_d/" target="_blank", title="CodePen")
           img(src="./assets/img/icons/CodePen.png", alt="CodePen　logo")
+
   
     nav.flex.column
       a(href="").menu-item.flex.justify-center.active

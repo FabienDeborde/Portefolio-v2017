@@ -17,7 +17,7 @@
       <input class="hidden" id="toggle" type="checkbox"/>
       <header class="flex v-align-center justify-between"><a class="main-logo" href=""><img src="./assets/img/icons/logo.png" alt="Fabien Deborde's Logo, representing a F and a D surrounded by waves"/></a>
         <label class="menu" for="toggle">
-          <div class="menu-icon-wrapper flex column justify-between">
+          <div class="menu-icon-wrapper flex column justify-between" title="Menu">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
@@ -29,11 +29,11 @@
           <h1 class="accent-font text-center">Fabien Deborde</h1>
           <h4 class="accent-font text-center">Web Developer / Lifelong Learner</h4>
           <p>
-            Bonjour ! I'm Fabien, a French Web developer living in Nagoya.Take a look at <a class="accent-color" href="#">my work </a> or <a class="accent-color" href="#">my skills</a>, and if you want to get in touch, feel free to use the <a class="accent-color" href="#">contact form</a>
+            Bonjour ! I'm Fabien, a French Web developer living in Nagoya.Take a look at <a class="accent-color" href="#" title="Check my work">my work </a> or <a class="accent-color" href="#" title="Check my skills">my skills</a>, and if you want to get in touch, feel free to use the <a class="accent-color" href="#" title="Contact me">contact form</a>
             below!
             You can also follow me on the following networks!
           </p>
-          <div class="social-container text-center"><a href="https://twitter.com/fabiendeborde" target="_blank"><img src="./assets/img/icons/Twitter.png" alt="Twitter logo"/></a><a href="https://github.com/FabienDeborde" target="_blank"><img src="./assets/img/icons/GitHub.png" alt="GitHub logo"/></a><a href="https://codepen.io/fabien_d/" target="_blank"><img src="./assets/img/icons/CodePen.png" alt="CodePen　logo"/></a></div>
+          <div class="social-container text-center"><a href="https://twitter.com/fabiendeborde" target="_blank" title="Twitter"><img src="./assets/img/icons/Twitter.png" alt="Twitter logo"/></a><a href="https://github.com/FabienDeborde" target="_blank" title="GitHub"><img src="./assets/img/icons/GitHub.png" alt="GitHub logo"/></a><a href="https://codepen.io/fabien_d/" target="_blank" title="CodePen"><img src="./assets/img/icons/CodePen.png" alt="CodePen　logo"/></a></div>
         </div>
         <nav class="flex column"><a class="menu-item flex justify-center active" href="">
             <div class="menu-text text-center accent-font">Home</div>
@@ -74,7 +74,24 @@
       <section id="about"></section>
       <!-- About section (end)-->
       <!-- Contact section-->
-      <section id="contact"></section>
+      <section class="flex justify-center v-align-center" id="contact">
+        <div class="wrapper">
+          <div class="message">You have a project and have some questions for me, or maybe you just want to chat and discuss web development?<br/>Contact me using the form below, or send me a message on the following networks!</div>
+          <form>
+            <div class="row flex">
+              <input type="text" placeholder="Your name"/>
+              <input type="email" placeholder="Your email"/>
+            </div>
+            <div class="row flex">
+              <textarea placeholder="Your message..." rows="6"></textarea>
+            </div>
+            <div class="row flex">
+              <input class="btn-bicolor btn-bicolor-blue" id="submit" type="submit" value="Send"/>
+            </div>
+          </form>
+          <div class="social-container flex justify-center v-align-center"><a href="https://twitter.com/fabiendeborde" target="_blank" title="Twitter"><img src="./assets/img/icons/Twitter.png" alt="Twitter logo"/></a><a href="https://github.com/FabienDeborde" target="_blank" title="GitHub"><img src="./assets/img/icons/GitHub.png" alt="GitHub logo"/></a><a href="https://codepen.io/fabien_d/" target="_blank" title="CodePen"><img src="./assets/img/icons/CodePen.png" alt="CodePen　logo"/></a></div>
+        </div>
+      </section>
       <!-- Contact section (end)-->
     </main>
     <!--script(src="./assets/js/vendors-dist.js")-->
