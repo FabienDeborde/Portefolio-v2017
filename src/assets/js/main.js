@@ -69,7 +69,6 @@ $(function() {
     var nameScroll = nameInput.offset().top + ((nameInput.height()) / 2) - 200;
     var msgScroll = msgInput.offset().top + ((msgInput.height()) / 2) - 200;
     var submitScroll = submitBtn.offset().top + ((submitBtn.height()) / 2) - 200;
-    console.log(nameScroll, msgScroll, submitScroll);
 
     var animateInputs = function() {
       nameInput.addClass('active');
@@ -88,7 +87,7 @@ $(function() {
   // Scrolling effect on the whole page
   $(document).on('scroll', function(e){
     var scroll = $(this).scrollTop();
-    console.log(scroll);
+    //console.log(scroll);
     //Hide Sidebar when scroll more than 100px
     if (scroll > 100) {
       $('#sidebar').addClass('retracted');
