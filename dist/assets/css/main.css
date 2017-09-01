@@ -759,7 +759,7 @@ section#about {
     width: 400px;
     border-radius: 50%;
     border: 2px solid #121f32;
-    box-shadow: 0px 0px 0px 2000px #121f32;
+    box-shadow: 0px 0px 0px 10000px #121f32;
     position: absolute;
     top: 0;
     left: 35%;
