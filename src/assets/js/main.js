@@ -39,41 +39,50 @@ $(function() {
   // About me section
   ////////////////////////
   // Remove nojs class and active dots
-  $('section#about').removeClass('nojs');
-  $('section#about .dot').removeClass('active');
-  var animateDot = function(el, number) {
-    var dots = el.find('.dot');
-    dots.each(function(i, el) {
-      if (i < number) {
-        setTimeout(function() {
-          $(el).addClass('active');
-        }, i * 300);
-      }
-    });
-  }
-
+    $('section#about').removeClass('nojs');
+    $('section#about .dot').removeClass('active');
+    var animateDot = function(el, number) {
+      var dots = el.find('.dot');
+      dots.each(function(i, el) {
+        if (i < number) {
+          setTimeout(function() {
+            $(el).addClass('active');
+          }, i * 200);
+        }
+      });
+    }
+    var aboutScroll = ($('section#about').offset().top) + (($('section#about').height()) / 2) - 100;
+    var aboutEndScroll = ($('section#about').offset().top) + (($('section#about').height()) * 1.5) + 100;
+    var dotScroll1 = ($('#html').offset().top) + (($('#html').height()) / 2) - 200;
+    var dotScroll2 = ($('#webdev').offset().top) + (($('#webdev').height()) / 2) - 200;
+    var dotScroll3 = ($('#learning').offset().top) + (($('#learning').height()) / 2) - 200;
 
   ////////////////////////
   // Contact section
   ////////////////////////
-  $('section#contact').removeClass('nojs');
-  var nameInput = $('#name');
-  var emailInput = $('#email');
-  var msgInput = $('#msg');
-  var submitBtn = $('#submit');
+    $('section#contact').removeClass('nojs');
+    var nameInput = $('#name');
+    var emailInput = $('#email');
+    var msgInput = $('#msg');
+    var submitBtn = $('#submit');
+    var formScroll = $('#msgForm').offset().top;
+    var nameScroll = nameInput.offset().top + ((nameInput.height()) / 2) - 200;
+    var msgScroll = msgInput.offset().top + ((msgInput.height()) / 2) - 200;
+    var submitScroll = submitBtn.offset().top + ((submitBtn.height()) / 2) - 200;
+    console.log(nameScroll, msgScroll, submitScroll);
 
-  var animateInputs = function() {
-    nameInput.addClass('active');
-    emailInput.addClass('active');
-  }
+    var animateInputs = function() {
+      nameInput.addClass('active');
+      emailInput.addClass('active');
+    }
 
-  var animateMsg = function() {
-    msgInput.addClass('active');
-  }
+    var animateMsg = function() {
+      msgInput.addClass('active');
+    }
 
-  var animateBtn = function() {
-    submitBtn.addClass('active');
-  }
+    var animateBtn = function() {
+      submitBtn.addClass('active');
+    }
 
 
   // Scrolling effect on the whole page
@@ -95,42 +104,40 @@ $(function() {
       $('#sidebar').removeClass('retracted');
     }
 
-    // Animate About section between 2700 and 3650 ScrollTop
-    if (scroll > 2700 && scroll < 3650) {
+    // Animate About section between 2700 and 3850 ScrollTop
+    if (scroll > aboutScroll && scroll < aboutEndScroll) {
       $('section#about').addClass('unwrapped');
     } else {
       $('section#about').removeClass('unwrapped');
       $('section#about .dot').removeClass('active');
     }
     // Animate Skills dots
-    if (scroll > 2710) {
+    if (scroll > dotScroll1) {
       animateDot($('section#about #html .dots'), 9);
       animateDot($('section#about #js .dots'), 9);
     }
-    if (scroll > 2780) {
+    if (scroll > dotScroll2) {
       animateDot($('section#about #webdev .dots'), 9);
       animateDot($('section#about #webdesign .dots'), 7);
     }
-    if (scroll > 2850) {
+    if (scroll > dotScroll3) {
       animateDot($('section#about #organization .dots'), 8);
       animateDot($('section#about #learning .dots'), 10);
     }
-    if (scroll < 3320) {
+    if (scroll < formScroll) {
       nameInput.removeClass('active');
       emailInput.removeClass('active');
       msgInput.removeClass('active');
       submitBtn.removeClass('active');
     }
-    if (scroll > 3422) {
+    if (scroll > nameScroll) {
       animateInputs();
     }
-    if (scroll > 3634) {
+    if (scroll > msgScroll) {
       animateMsg();
     }
-    if (scroll > 3740) {
+    if (scroll > submitScroll) {
       animateBtn();
     }
-
-
   })
 });
