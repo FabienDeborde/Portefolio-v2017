@@ -20,6 +20,8 @@ html(lang="en")
     // Sidebar (end)
     
     main
+      .nojs.notice-message.text-center This site require JavaScript for a better user experience.
+        
       // Work section
       include ./assets/includes/_work.jade
       // Work section (end)  
@@ -33,6 +35,9 @@ html(lang="en")
       // Contact section (end)
    
     //script(src="./assets/js/vendors-dist.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="https://masonry.desandro.com/masonry.pkgd.js")
+    script(src="https://imagesloaded.desandro.com/imagesloaded.pkgd.js")
     
     //メインカスタム JS
-    //script(src="./assets/js/main-dist.js")
+    script(src="./assets/js/main-dist.js")

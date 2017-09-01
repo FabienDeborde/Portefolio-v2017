@@ -13,7 +13,7 @@
   </head>
   <body>
     <!-- Sidebar-->
-    <aside id="sidebar">
+    <aside class="retracted" id="sidebar">
       <input class="hidden" id="toggle" type="checkbox"/>
       <header class="flex v-align-center justify-between"><a class="main-logo" href=""><img src="./assets/img/icons/logo.png" alt="Fabien Deborde's Logo, representing a F and a D surrounded by waves"/></a>
         <label class="menu" for="toggle">
@@ -71,13 +71,36 @@
     </aside>
     <!-- Sidebar (end)-->
     <main>
+      <div class="nojs notice-message text-center">This site require JavaScript for a better user experience.</div>
       <!-- Work section-->
-      <section id="work"></section>
+      <section id="work">
+        <h2 class="text-center accent-font">My Work</h2>
+        <div class="grid">
+          <div class="grid-sizer"></div>
+          <div class="grid-item"><a><img src="./assets/img/screenshots/F45.png" alt="" title=""/></a></div>
+          <div class="grid-item"><a><img src="./assets/img/screenshots/realEstate.png" alt="" title=""/></a></div>
+          <div class="grid-item"><a><img src="./assets/img/screenshots/realEstate2.png" alt="" title=""/></a></div>
+          <div class="grid-item"><a><img src="./assets/img/screenshots/realEstate3.png" alt="" title=""/></a></div>
+          <div class="grid-item"><a><img src="./assets/img/screenshots/realEstate4.png" alt="" title=""/></a></div>
+          <div class="grid-item"><a><img src="./assets/img/screenshots/Kyo-Zen.png" alt="" title=""/></a></div>
+          <div class="grid-item"><a><img src="./assets/img/screenshots/calculator.png" alt="" title=""/></a></div>
+          <div class="grid-item"><a><img src="./assets/img/screenshots/pomodoro-sleek.png" alt="" title=""/></a></div>
+          <div class="grid-item"><a><img src="./assets/img/screenshots/twitch.png" alt="" title=""/></a></div>
+          <div class="grid-item"><a><img src="./assets/img/screenshots/weather.png" alt="" title=""/></a></div>
+          <div class="grid-item"><a><img src="./assets/img/screenshots/pomodoro-simple.png" alt="" title=""/></a></div>
+          <div class="grid-item"><a><img src="./assets/img/screenshots/simon-game.png" alt="" title=""/></a></div>
+          <div class="grid-item"><a><img src="./assets/img/screenshots/tictactoe.png" alt="" title=""/></a></div>
+          <div class="grid-item"><a><img src="./assets/img/screenshots/quote.png" alt="" title=""/></a></div>
+          <div class="grid-item"><a><img src="./assets/img/screenshots/buttons.png" alt="" title=""/></a></div>
+          <div class="grid-item"><a><img src="./assets/img/screenshots/wikiviewer.png" alt="" title=""/></a></div>
+        </div>
+      </section>
       <!-- Work section (end)  -->
       <!-- About section-->
       <section class="nojs" id="about">
         <div class="circle"></div>
         <div class="about-wrapper">
+          <h2 class="text-center accent-font">About me</h2>
           <div class="wrapper">
             <div class="aboutme"> 
               <p>Hello! I'm Fabien, a French Web developer living in Japan since 2008.</p>
@@ -190,6 +213,7 @@
       <!-- Contact section-->
       <section class="flex justify-center v-align-center" id="contact">
         <div class="wrapper">
+          <h2 class="text-center accent-font">Contact</h2>
           <div class="message"> 
             <p>You have a project and have some questions for me, or maybe you just want to chat and discuss web development?</p>
             <p>Contact me using the form below, or send me a message on the following networks!</p>
@@ -212,7 +236,10 @@
       <!-- Contact section (end)-->
     </main>
     <!--script(src="./assets/js/vendors-dist.js")-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+    <script src="https://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
     <!--メインカスタム JS-->
-    <!--script(src="./assets/js/main-dist.js")-->
+    <script src="./assets/js/main-dist.js"></script>
   </body>
 </html>

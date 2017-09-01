@@ -1,3 +1,36 @@
 section#work
-  height: 1500px
-  background-color: darkblue
+  position: relative
+  z-index: 5
+  height: auto
+  box-sizing: border-box
+  background-color: $darkBlue
+
+  h2
+    position: relative
+    z-index: 1000
+    padding: 40px 0
+    margin: 0
+  .grid
+    position: relative
+    z-index: 100
+    margin: 0 auto
+    /* clear fix */
+    &:after
+      content: ''
+      display: block
+      clear: both
+    /* ---- .grid-item ---- */
+    .grid-sizer,
+    .grid-item
+      width: 400px
+    .grid-item
+      float: left
+      margin-bottom: 10px
+      img
+        display: block
+        max-width: 100%
+        margin: auto
+        cursor: pointer
+        transition: transform 200ms ease-in-out
+        &:hover
+          transform: scale(1.01)
