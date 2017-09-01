@@ -1,16 +1,16 @@
-section#contact.flex.justify-center.v-align-center.section
+section#contact.flex.justify-center.v-align-center.section.nojs
   .wrapper
     h2.text-center.accent-font Contact
     .message 
       p You have a project and have some questions for me, or maybe you just want to chat and discuss web development?
       p Contact me using the form below, or send me a message on the following networks!
       
-    form
+    form(id="msgForm")
       .row.flex
-        input(type="text" placeholder="Your name")
-        input(type="email" placeholder="Your email")
+        input#name(type="text" placeholder="Your name")
+        input#email(type="email" placeholder="Your email")
       .row.flex
-        textarea(placeholder="Your message...", rows="6")
+        textarea#msg(placeholder="Your message...", rows="6")
       .row.flex
         input.btn-bicolor.btn-bicolor-blue#submit(type="submit" value="Send")
 

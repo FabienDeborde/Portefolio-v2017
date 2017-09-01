@@ -1,6 +1,7 @@
 section#contact
   position: relative
   z-index: 5
+  overflow: hidden
   .message
     font-size: 1.5rem
   form
@@ -8,15 +9,41 @@ section#contact
     width: 100%
     input
       flex-grow: 1
-      &[type="text"]
+      transition: all 300ms ease-in-out
+      &#name
         margin-right: 20px
-      &[type="submit"]
+        transform: translateX(-2000px)
+        &.active
+          transform: none
+      &#email
+        transform: translateX(2000px)
+        &.active
+          transform: none
+      &#submit
         width: 50%
+        opacity: 0
+        &.active
+          opacity: 1
     textarea
+      transition: all 300ms ease-in-out
       width: 100%
       margin: 20px 0 60px 0
+      transform: translateY(2000px)
+      &.active
+        transform: none
 
   .social-container.flex.justify-center.v-align-center
     a
       img
         width: 70px
+  &.nojs
+    form
+      input
+        &#name
+          transform: none
+        &#email
+          transform: none
+        &#submit
+          opacity: 1
+      textarea
+        transform: none

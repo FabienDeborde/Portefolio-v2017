@@ -115,7 +115,7 @@
           <hr/>
           <div class="wrapper">
             <div class="skills flex justify-center">
-              <div class="skill-wrapper">
+              <div class="skill-wrapper" id="html">
                 <div class="skill">HTML5 / CSS3</div>
                 <div class="dots flex justify-between v-align-center">
                   <div class="dot active"></div>
@@ -130,7 +130,7 @@
                   <div class="dot"></div>
                 </div>
               </div>
-              <div class="skill-wrapper">
+              <div class="skill-wrapper" id="js">
                 <div class="skill">JavaScript / jQuery</div>
                 <div class="dots flex justify-between v-align-center">
                   <div class="dot active"></div>
@@ -145,7 +145,7 @@
                   <div class="dot"></div>
                 </div>
               </div>
-              <div class="skill-wrapper">
+              <div class="skill-wrapper" id="webdev">
                 <div class="skill">Web Development</div>
                 <div class="dots flex justify-between v-align-center">
                   <div class="dot active"></div>
@@ -160,7 +160,7 @@
                   <div class="dot"></div>
                 </div>
               </div>
-              <div class="skill-wrapper">
+              <div class="skill-wrapper" id="webdesign">
                 <div class="skill">Web Design</div>
                 <div class="dots flex justify-between v-align-center">
                   <div class="dot active"></div>
@@ -175,7 +175,7 @@
                   <div class="dot"></div>
                 </div>
               </div>
-              <div class="skill-wrapper">
+              <div class="skill-wrapper" id="organization">
                 <div class="skill">Organization</div>
                 <div class="dots flex justify-between v-align-center">
                   <div class="dot active"></div>
@@ -190,7 +190,7 @@
                   <div class="dot"></div>
                 </div>
               </div>
-              <div class="skill-wrapper">
+              <div class="skill-wrapper" id="learning">
                 <div class="skill">Learning</div>
                 <div class="dots flex justify-between v-align-center">
                   <div class="dot active"></div>
@@ -211,20 +211,20 @@
       </section>
       <!-- About section (end)-->
       <!-- Contact section-->
-      <section class="flex justify-center v-align-center section" id="contact">
+      <section class="flex justify-center v-align-center section nojs" id="contact">
         <div class="wrapper">
           <h2 class="text-center accent-font">Contact</h2>
           <div class="message"> 
             <p>You have a project and have some questions for me, or maybe you just want to chat and discuss web development?</p>
             <p>Contact me using the form below, or send me a message on the following networks!</p>
           </div>
-          <form>
+          <form id="msgForm">
             <div class="row flex">
-              <input type="text" placeholder="Your name"/>
-              <input type="email" placeholder="Your email"/>
+              <input id="name" type="text" placeholder="Your name"/>
+              <input id="email" type="email" placeholder="Your email"/>
             </div>
             <div class="row flex">
-              <textarea placeholder="Your message..." rows="6"></textarea>
+              <textarea id="msg" placeholder="Your message..." rows="6"></textarea>
             </div>
             <div class="row flex">
               <input class="btn-bicolor btn-bicolor-blue" id="submit" type="submit" value="Send"/>
