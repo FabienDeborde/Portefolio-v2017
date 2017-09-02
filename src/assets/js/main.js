@@ -45,11 +45,11 @@ $(function() {
     var inView = $(window).height();
     var offset = 200;
     scrolls = {
-      about : (about.offset().top) - (about.height()) + offset,
+      about : (about.offset().top) - (about.height()) + offset * 2,
       aboutEnd : (about.offset().top + about.height()) - 50,
-      dot1 : (html.offset().top) - inView + offset* 0.75,
-      dot2 : (webdev.offset().top) - inView + offset* 0.75,
-      dot3 : (learning.offset().top) - inView + offset* 0.75,
+      dot1 : (html.offset().top) - inView + offset * 0.75,
+      dot2 : (webdev.offset().top) - inView + offset * 0.75,
+      dot3 : (learning.offset().top) - inView + offset * 0.75,
       form : msgForm.offset().top - inView,
       name : nameInput.offset().top - inView + offset,
       msg : nameInput.offset().top - inView + offset + nameInput.height(),
