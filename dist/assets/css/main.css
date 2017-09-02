@@ -701,7 +701,8 @@ section#work {
       clear: both; }
     section#work .grid .grid-sizer,
     section#work .grid .grid-item {
-      width: 33%; }
+      width: 33%;
+      max-width: 400px; }
     section#work .grid .grid-item {
       float: left;
       margin-bottom: 10px;
