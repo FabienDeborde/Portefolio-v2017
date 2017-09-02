@@ -12,14 +12,13 @@ $(function() {
   var emailInput = $('#email');
   var msgInput = $('#msg');
   var submitBtn = $('#submit');
+  var scrolls = {}
 
   ////////////////////////
   // Smooth Scrolling
   ////////////////////////
 
   //@prepros-append scrollspy.js
-
-
 
   ////////////////////////
   // Work section
@@ -40,9 +39,9 @@ $(function() {
     $grid.masonry();
   });
   // Update sections layout infos after Masonry finsihed rearranging images
-  var scrolls = {}
-  $grid.on( 'layoutComplete', function() { // Will update the scrolls value on each masonry update
-    console.log('layout done, just this one time');
+  // Will update the scrolls value on each masonry update
+  $grid.on( 'layoutComplete', function() {
+    //console.log('layout done, just this one time');
     var inView = $(window).height();
     var offset = 200;
     scrolls = {
@@ -71,9 +70,9 @@ $(function() {
   // About me section
   ////////////////////////
   // Remove nojs class and active dots
-    $('section#about').removeClass('nojs');
-    $('section#about .dot').removeClass('active');
-    var animateDot = function(el, number) {
+  $('section#about').removeClass('nojs');
+  $('section#about .dot').removeClass('active');
+  var animateDot = function(el, number) {
       var dots = el.find('.dot');
       dots.each(function(i, el) {
         if (i < number) {
@@ -87,87 +86,95 @@ $(function() {
   ////////////////////////
   // Contact section
   ////////////////////////
-    $('section#contact').removeClass('nojs');
-    var animateInputs = function() {
-      nameInput.addClass('active');
-      emailInput.addClass('active');
-    }
-    var animateMsg = function() {
-      msgInput.addClass('active');
-    }
-    var animateBtn = function() {
-      submitBtn.addClass('active');
-    }
+  $('section#contact').removeClass('nojs');
+  var animateInputs = function() {
+    nameInput.addClass('active');
+    emailInput.addClass('active');
+  }
+  var animateMsg = function() {
+    msgInput.addClass('active');
+  }
+  var animateBtn = function() {
+    submitBtn.addClass('active');
+  }
 
-  // Scrolling effect on the whole page
-  $(document).on('scroll', function(e){
-    var scroll = $(this).scrollTop();
-    var inView = $(window).height();
-    console.log(scroll, inView);
-    //Hide Sidebar when scroll more than 100px
-    if (scroll > 100) {
-      $('#sidebar').addClass('retracted');
-      // $('#sidebar').on('mouseenter', function(){
-      //   $('#sidebar').removeClass('retracted');
-      // })
-      //
-      // $('#sidebar').on('mouseleave', function(){
-      //   $('#sidebar').addClass('retracted');
-      // })
-    } else {
-      // Show Sidebar when top of the page
-      $('#sidebar').removeClass('retracted');
-    }
+    ////////////////////////
+    // Parallax effects
+    ////////////////////////
+  var parallax = function() {
+    $(document).on('scroll', function(e){
+      var scroll = $(this).scrollTop();
+      var inView = $(window).height();
+      //console.log(scroll, inView);
+      //Hide Sidebar when scroll more than 100px
+      if (scroll > 100) {
+        $('#sidebar').addClass('retracted');
+        // $('#sidebar').on('mouseenter', function(){
+        //   $('#sidebar').removeClass('retracted');
+        // })
+        //
+        // $('#sidebar').on('mouseleave', function(){
+        //   $('#sidebar').addClass('retracted');
+        // })
+      } else {
+        // Show Sidebar when top of the page
+        $('#sidebar').removeClass('retracted');
+      }
 
-    // Animate About section between 2700 and 3850 ScrollTop
-    if (scroll > scrolls.about && scroll < scrolls.aboutEnd) {
-      $('section#about').addClass('unwrapped');
-    } else {
-      $('section#about').removeClass('unwrapped');
-      $('section#about .dot').removeClass('active');
-    }
-    // Animate Skills dots
-    if (scroll > scrolls.dot1) {
-      animateDot($('section#about #html .dots'), 9);
-      animateDot($('section#about #js .dots'), 9);
-    }
-    if (scroll > scrolls.dot2) {
-      animateDot($('section#about #webdev .dots'), 9);
-      animateDot($('section#about #webdesign .dots'), 7);
-    }
-    if (scroll > scrolls.dot3) {
-      animateDot($('section#about #organization .dots'), 8);
-      animateDot($('section#about #learning .dots'), 10);
-    }
-    if (scroll < scrolls.form) {
-      nameInput.removeClass('active');
-      emailInput.removeClass('active');
-      msgInput.removeClass('active');
-      submitBtn.removeClass('active');
-    }
-    if (scroll > scrolls.name) {
-      animateInputs();
-    }
-    if (scroll > scrolls.msg) {
-      animateMsg();
-    }
-    if (scroll > scrolls.submit) {
-      animateBtn();
-    }
-  })
+      // Animate About section between 2700 and 3850 ScrollTop
+      if (scroll > scrolls.about && scroll < scrolls.aboutEnd) {
+        $('section#about').addClass('unwrapped');
+      } else {
+        $('section#about').removeClass('unwrapped');
+        $('section#about .dot').removeClass('active');
+      }
+      // Animate Skills dots
+      if (scroll > scrolls.dot1) {
+        animateDot($('section#about #html .dots'), 9);
+        animateDot($('section#about #js .dots'), 9);
+      }
+      if (scroll > scrolls.dot2) {
+        animateDot($('section#about #webdev .dots'), 9);
+        animateDot($('section#about #webdesign .dots'), 7);
+      }
+      if (scroll > scrolls.dot3) {
+        animateDot($('section#about #organization .dots'), 8);
+        animateDot($('section#about #learning .dots'), 10);
+      }
+      if (scroll < scrolls.form) {
+        nameInput.removeClass('active');
+        emailInput.removeClass('active');
+        msgInput.removeClass('active');
+        submitBtn.removeClass('active');
+      }
+      if (scroll > scrolls.name) {
+        animateInputs();
+      }
+      if (scroll > scrolls.msg) {
+        animateMsg();
+      }
+      if (scroll > scrolls.submit) {
+        animateBtn();
+      }
+    })
 
-
-  console.log(scrolls);
-  $('.main-logo').on('click', function(e){
-    e.preventDefault();
-    console.log(scrolls);
-    var offset = $('#msgForm').offset().top;
-    var height = $('#msgForm').height();
-    var inView = $(window).height();
-    console.log('offset: ' + offset);
-    console.log('height: ' + height);
-    console.log('offset - height: ' + (offset - inView));
+    //Scrolling debug
+    //console.log(scrolls);
+    // $('.main-logo').on('click', function(e){
+    //   e.preventDefault();
+    //   console.log(scrolls);
+    //   var offset = $('#msgForm').offset().top;
+    //   var height = $('#msgForm').height();
+    //   var inView = $(window).height();
+    //   console.log('offset: ' + offset);
+    //   console.log('height: ' + height);
+    //   console.log('offset - height: ' + (offset - inView));
 
     //console.log(($('section#about').offset().top) + (($('section#about').height()) / 2) - 100);
-  })
+    // })
+  }
+  parallax();
+
+
+  /////////////////////
 });

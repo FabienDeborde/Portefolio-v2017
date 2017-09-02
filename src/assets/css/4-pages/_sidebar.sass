@@ -22,22 +22,28 @@ aside#sidebar
         width: 100%
         height: auto
     .menu
-      .menu-icon-wrapper
-        height: 30px
-        width: 40px
-        cursor: pointer
-        position: relative
-        .bar
-          height: 4px
-          width: 100%
-          background-color: $white
-          border-radius: 4px
-          transition: all 300ms ease-in-out
+      height: 30px
+      width: 40px
+      position: absolute
+      right: 20px
+      z-index: 50
+      cursor: pointer
       &:hover
-        .bar
+        &+.menu-icon-wrapper .bar
           background-color: $orange
+    .menu-icon-wrapper
+      height: 30px
+      width: 40px
+      position: relative
+      .bar
+        height: 4px
+        width: 100%
+        background-color: $white
+        border-radius: 4px
+        transition: all 300ms ease-in-out
+
   input#toggle:checked
-    &+header .menu
+    &+header .menu-icon-wrapper
       .bar
         position: absolute
         top: 50%
@@ -63,7 +69,7 @@ aside#sidebar
       h1
         margin: 0
         font-size: 2.8rem
-      h4
+      h2
         margin: 0
         font-size: 1.5rem
 

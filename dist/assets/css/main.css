@@ -431,8 +431,6 @@ body {
   font-size: 16px;
   line-height: 1.6;
   font-family: 'Raleway', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
   background-color: #121f32;
   color: #F8F8F8;
   /* 各セクションのメインスタイル */
@@ -445,23 +443,18 @@ body {
     margin: auto;
     z-index: 100; }
   body .flex {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
   body .column {
-    -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
   body .v-align-center {
-    -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
   body .justify-center {
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center; }
   body .justify-between {
-    -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between; }
   body .accent-font {
@@ -480,8 +473,6 @@ body {
       width: 50px;
       height: auto; }
       body .social-container a img:hover {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
         transform: scale(1.1); }
   body .nojs.notice-message {
     background-color: #121f32;
@@ -571,43 +562,42 @@ aside#sidebar {
       aside#sidebar header .main-logo img {
         width: 100%;
         height: auto; }
-    aside#sidebar header .menu .menu-icon-wrapper {
+    aside#sidebar header .menu {
       height: 30px;
       width: 40px;
-      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      z-index: 50;
+      cursor: pointer; }
+      aside#sidebar header .menu:hover + .menu-icon-wrapper .bar {
+        background-color: #dfa82c; }
+    aside#sidebar header .menu-icon-wrapper {
+      height: 30px;
+      width: 40px;
       position: relative; }
-      aside#sidebar header .menu .menu-icon-wrapper .bar {
+      aside#sidebar header .menu-icon-wrapper .bar {
         height: 4px;
         width: 100%;
         background-color: #F8F8F8;
         border-radius: 4px;
         transition: all 300ms ease-in-out; }
-    aside#sidebar header .menu:hover .bar {
-      background-color: #dfa82c; }
-  aside#sidebar input#toggle:checked + header .menu .bar {
+  aside#sidebar input#toggle:checked + header .menu-icon-wrapper .bar {
     position: absolute;
     top: 50%; }
-  aside#sidebar input#toggle:checked + header .menu .bar:nth-child(2) {
+  aside#sidebar input#toggle:checked + header .menu-icon-wrapper .bar:nth-child(2) {
     display: none; }
-  aside#sidebar input#toggle:checked + header .menu .bar:first-child {
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
+  aside#sidebar input#toggle:checked + header .menu-icon-wrapper .bar:first-child {
     transform: rotate(-45deg); }
-  aside#sidebar input#toggle:checked + header .menu .bar:last-child {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
+  aside#sidebar input#toggle:checked + header .menu-icon-wrapper .bar:last-child {
     transform: rotate(45deg); }
   aside#sidebar input#toggle:checked ~ .main-content .blurb {
     display: none; }
   aside#sidebar input#toggle:checked ~ .main-content nav {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
   aside#sidebar .main-content {
     position: absolute;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 100%;
     height: 60%; }
@@ -616,7 +606,7 @@ aside#sidebar {
       aside#sidebar .main-content .blurb h1 {
         margin: 0;
         font-size: 2.8rem; }
-      aside#sidebar .main-content .blurb h4 {
+      aside#sidebar .main-content .blurb h2 {
         margin: 0;
         font-size: 1.5rem; }
       aside#sidebar .main-content .blurb p {
@@ -628,7 +618,6 @@ aside#sidebar {
       display: none;
       height: 100%;
       width: 100%;
-      -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
       justify-content: space-around;
       position: absolute; }
@@ -661,7 +650,6 @@ aside#sidebar {
   aside#sidebar.retracted {
     left: -300px; }
     aside#sidebar.retracted .main-content nav {
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; }
     aside#sidebar.retracted header .main-logo {
@@ -713,18 +701,12 @@ section#work {
         max-width: 100%;
         margin: auto;
         cursor: pointer;
-        transition: -webkit-transform 200ms ease-in-out;
-        transition: transform 200ms ease-in-out;
-        transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out; }
+        transition: transform 200ms ease-in-out; }
       section#work .grid .grid-item:hover {
-        -webkit-transform: scale(1.01);
-        -ms-transform: scale(1.01);
         transform: scale(1.01); }
       section#work .grid .grid-item.active {
         position: absolute;
         left: 50% !important;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
         transform: translateX(-50%);
         z-index: 1;
         width: 50%; }
@@ -736,13 +718,10 @@ section#about {
   background-repeat: no-repeat;
   position: relative;
   font-size: 1.2rem;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
   transition: all 400ms ease-in-out;
@@ -782,7 +761,6 @@ section#about {
       margin: 0.5rem 0; }
     section#about .about-wrapper .wrapper .skills {
       margin-bottom: 80px;
-      -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
       section#about .about-wrapper .wrapper .skills .skill-wrapper {
@@ -802,16 +780,12 @@ section#about {
   section#about.unwrapped::after {
     background-color: rgba(18, 31, 50, 0.7); }
   section#about.unwrapped .circle {
-    -webkit-transform: scale(15);
-    -ms-transform: scale(15);
     transform: scale(15); }
   section#about.unwrapped .about-wrapper {
     opacity: 1; }
   section#about.nojs::after {
     background-color: rgba(18, 31, 50, 0.7); }
   section#about.nojs .circle {
-    -webkit-transform: scale(15);
-    -ms-transform: scale(15);
     transform: scale(15); }
   section#about.nojs .about-wrapper {
     opacity: 1; }
@@ -822,30 +796,27 @@ section#contact {
   overflow: hidden; }
   section#contact .message {
     font-size: 1.5rem; }
+  section#contact #submit-success, section#contact #submit-error {
+    font-style: italic;
+    text-align: center;
+    font-size: 1.1rem; }
+  section#contact #submit-error {
+    color: #e77e24; }
   section#contact form {
-    margin: 80px 0;
+    margin: 40px 0;
     width: 100%; }
     section#contact form input {
-      -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
       flex-grow: 1;
       transition: all 300ms ease-in-out; }
       section#contact form input#name {
         margin-right: 20px;
-        -webkit-transform: translateX(-2000px);
-        -ms-transform: translateX(-2000px);
         transform: translateX(-2000px); }
         section#contact form input#name.active {
-          -webkit-transform: none;
-          -ms-transform: none;
           transform: none; }
       section#contact form input#email {
-        -webkit-transform: translateX(2000px);
-        -ms-transform: translateX(2000px);
         transform: translateX(2000px); }
         section#contact form input#email.active {
-          -webkit-transform: none;
-          -ms-transform: none;
           transform: none; }
       section#contact form input#submit {
         width: 50%;
@@ -856,26 +827,16 @@ section#contact {
       transition: all 300ms ease-in-out;
       width: 100%;
       margin: 20px 0 60px 0;
-      -webkit-transform: translateY(2000px);
-      -ms-transform: translateY(2000px);
       transform: translateY(2000px); }
       section#contact form textarea.active {
-        -webkit-transform: none;
-        -ms-transform: none;
         transform: none; }
   section#contact .social-container.flex.justify-center.v-align-center a img {
     width: 70px; }
   section#contact.nojs form input#name {
-    -webkit-transform: none;
-    -ms-transform: none;
     transform: none; }
   section#contact.nojs form input#email {
-    -webkit-transform: none;
-    -ms-transform: none;
     transform: none; }
   section#contact.nojs form input#submit {
     opacity: 1; }
   section#contact.nojs form textarea {
-    -webkit-transform: none;
-    -ms-transform: none;
     transform: none; }
