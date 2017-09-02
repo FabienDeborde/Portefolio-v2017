@@ -9,7 +9,6 @@ $(function() {
        $('#submit').prop('disabled', true);
       // Prepare the AJAX request
       const formData = $(form).serialize();
-      console.log(formData);
 
       $.ajax({
           method: 'POST',
@@ -26,7 +25,7 @@ $(function() {
         $('#msg').val('');
         $('#submit').prop('disabled', false);
       }).fail(function(data) {
-        console.log('Error: the message couldn\'t be delivered. (' + data.responseText + ')');
+        //console.log('Error: the message couldn\'t be delivered. (' + data.responseText + ')');
         $("#submit-error").html(data.responseText);
         $("#submit-error").toggleClass('hidden');
       });

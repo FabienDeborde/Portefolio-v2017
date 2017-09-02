@@ -1,7 +1,7 @@
 <?php
     //Display errors
-    ini_set('display_errors','on');
-    error_reporting(E_ALL);
+    // ini_set('display_errors','on');
+    // error_reporting(E_ALL);
 
     // Check for bots function
     function isBot() {
@@ -74,7 +74,7 @@
         include './email_body.php';
 
 
-        //Include the mailer script 
+        //Include the mailer script
         include './phpmailer.php';
 
         if(!$success) {
