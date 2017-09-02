@@ -726,7 +726,7 @@ section#work {
         -ms-transform: translateX(-50%);
         transform: translateX(-50%);
         z-index: 1;
-        width: 80%; }
+        width: 50%; }
 
 section#about {
   background-image: url("../img/photos/about-me.jpg");
