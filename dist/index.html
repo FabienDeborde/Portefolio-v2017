@@ -261,15 +261,16 @@
             <p>You have a project and have some questions for me, or maybe you just want to chat and discuss web development?</p>
             <p>Contact me using the form below, or send me a message on the following networks!</p>
           </div>
-          <div class="hidden" id="submit-success">Your message has been sent!</div>
+          <div class="hidden" id="submit-success">Thank you! Your message has been sent!</div>
           <div class="hidden" id="submit-error">An error occured. Please try again later.</div>
           <form id="msgForm">
             <div class="row flex">
-              <input id="name" type="text" placeholder="Your name"/>
-              <input id="email" type="email" placeholder="Your email"/>
+              <input id="name" type="text" name="name" placeholder="Your name"/>
+              <input id="email" type="email" name="email" placeholder="Your email"/>
+              <input class="hidden" id="phone" type="phone" name="phone" placeholder="Your phone number"/>
             </div>
             <div class="row flex">
-              <textarea id="msg" placeholder="Your message..." rows="6"></textarea>
+              <textarea id="msg" placeholder="Your message..." name="msg" rows="6"></textarea>
             </div>
             <div class="row flex">
               <input class="btn-bicolor btn-bicolor-blue" id="submit" type="submit" value="Send"/>

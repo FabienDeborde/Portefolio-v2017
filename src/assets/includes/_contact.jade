@@ -5,14 +5,15 @@ section#contact.flex.justify-center.v-align-center.section.nojs
       p You have a project and have some questions for me, or maybe you just want to chat and discuss web development?
       p Contact me using the form below, or send me a message on the following networks!
       
-    #submit-success.hidden Your message has been sent!
+    #submit-success.hidden Thank you! Your message has been sent!
     #submit-error.hidden An error occured. Please try again later.
     form(id="msgForm")
       .row.flex
-        input#name(type="text" placeholder="Your name")
-        input#email(type="email" placeholder="Your email")
+        input#name(type="text" name="name" placeholder="Your name")
+        input#email(type="email" name="email" placeholder="Your email")
+        input#phone.hidden(type="phone" name="phone" placeholder="Your phone number")
       .row.flex
-        textarea#msg(placeholder="Your message...", rows="6")
+        textarea#msg(placeholder="Your message...", name="msg" rows="6")
       .row.flex
         input.btn-bicolor.btn-bicolor-blue#submit(type="submit" value="Send")
 

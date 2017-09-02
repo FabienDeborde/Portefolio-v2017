@@ -98,9 +98,9 @@ $(function() {
     submitBtn.addClass('active');
   }
 
-    ////////////////////////
-    // Parallax effects
-    ////////////////////////
+  ////////////////////////
+  // Parallax effects
+  ////////////////////////
   var parallax = function() {
     $(document).on('scroll', function(e){
       var scroll = $(this).scrollTop();
@@ -176,5 +176,9 @@ $(function() {
   parallax();
 
 
-  /////////////////////
+  ////////////////////////
+  // Form Script
+  ////////////////////////
+
+  //@prepros-append form.js
 });

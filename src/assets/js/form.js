@@ -9,10 +9,11 @@ $(function() {
        $('#submit').prop('disabled', true);
       // Prepare the AJAX request
       const formData = $(form).serialize();
+      console.log(formData);
 
       $.ajax({
           method: 'POST',
-          url: './mailer.php',
+          url: 'server-assets/private-mailer.php',
           data: formData
       }).done(function(response) {
         console.log('message sent');
@@ -26,7 +27,8 @@ $(function() {
         $('#submit').prop('disabled', false);
       }).fail(function(data) {
         console.log('Error: the message couldn\'t be delivered. (' + data.responseText + ')');
-        $("#submit-error").toggleClass('is-hidden');
+        $("#submit-error").html(data.responseText);
+        $("#submit-error").toggleClass('hidden');
       });
     })
   }
