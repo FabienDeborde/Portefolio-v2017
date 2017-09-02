@@ -832,8 +832,10 @@ section#contact {
       transform: translateY(2000px); }
       section#contact form textarea.active {
         transform: none; }
-  section#contact .social-container.flex.justify-center.v-align-center a img {
-    width: 70px; }
+  section#contact .social-container.flex.justify-center.v-align-center {
+    padding-bottom: 10px; }
+    section#contact .social-container.flex.justify-center.v-align-center a img {
+      width: 70px; }
   section#contact.nojs form input#name {
     transform: none; }
   section#contact.nojs form input#email {
