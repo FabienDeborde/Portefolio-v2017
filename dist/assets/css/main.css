@@ -435,6 +435,7 @@ body {
   color: #F8F8F8;
   /* 各セクションのメインスタイル */
   /* ９９１px以下のメインフォントサイズ */
+  /* 768px以下のメインフォントサイズ */
   /* ５７５px以下のメインフォントサイズ */ }
   body .wrapper {
     position: relative;
@@ -493,10 +494,13 @@ body {
       background-color: #121f32; }
       body main section h2 {
         font-size: 3rem; }
-  @media only screen and (max-width: 991px) {
+  @media only screen and (max-width: 992px) {
     body {
       font-size: 14px; } }
-  @media only screen and (max-width: 575px) {
+  @media only screen and (max-width: 768px) {
+    body {
+      font-size: 13px; } }
+  @media only screen and (max-width: 576px) {
     body {
       font-size: 12px; } }
 
@@ -681,6 +685,7 @@ section#work {
     position: relative;
     z-index: 100;
     margin: 0 auto;
+    box-sizing: border-box;
     /* clear fix */
     /* ---- .grid-item ---- */ }
     section#work .grid:after {
@@ -689,11 +694,11 @@ section#work {
       clear: both; }
     section#work .grid .grid-sizer,
     section#work .grid .grid-item {
-      width: 33%;
-      max-width: 400px; }
+      width: calc((100% - 60px) / 4); }
     section#work .grid .grid-item {
       float: left;
-      margin-bottom: 10px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
       transition: all 300ms ease-in-out; }
       section#work .grid .grid-item img {
         display: block;
@@ -711,6 +716,16 @@ section#work {
         z-index: 1;
         width: 50%;
         max-width: 50%; }
+  @media only screen and (max-width: 1200px) {
+    section#work .grid .grid-sizer,
+    section#work .grid .grid-item {
+      width: calc((100% - 40px) / 3); }
+    section#work .grid .grid-item {
+      margin-bottom: 15px; } }
+  @media only screen and (max-width: 992px) {
+    section#work .grid .grid-sizer,
+    section#work .grid .grid-item {
+      width: calc((100% - 100px) / 3); } }
 
 section#about {
   background-image: url("../img/photos/about-me.jpg");

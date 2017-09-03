@@ -31,7 +31,7 @@ $(function() {
     itemSelector: '.grid-item',
     percentPosition: true,
     fitWidth: true,
-    gutter: 10,
+    gutter: 20,
     columnWidth: '.grid-sizer'
   });
   // layout Masonry after each image loads
@@ -41,7 +41,7 @@ $(function() {
   // Update sections layout infos after Masonry finsihed rearranging images
   // Will update the scrolls value on each masonry update
   $grid.on( 'layoutComplete', function() {
-    //console.log('layout done, just this one time');
+    //console.log('layout done');
     var inView = $(window).height();
     var offset = 200;
     scrolls = {
@@ -105,7 +105,8 @@ $(function() {
     $(document).on('scroll', function(e){
       var scroll = $(this).scrollTop();
       var inView = $(window).height();
-      //console.log(scroll, inView);
+      // console.log(scroll);
+
       //Hide Sidebar when scroll more than 100px
       if (scroll > 100) {
         $('#sidebar').addClass('retracted');
@@ -160,18 +161,18 @@ $(function() {
 
     //Scrolling debug
     //console.log(scrolls);
-    // $('.main-logo').on('click', function(e){
-    //   e.preventDefault();
-    //   console.log(scrolls);
-    //   var offset = $('#msgForm').offset().top;
-    //   var height = $('#msgForm').height();
-    //   var inView = $(window).height();
-    //   console.log('offset: ' + offset);
-    //   console.log('height: ' + height);
-    //   console.log('offset - height: ' + (offset - inView));
-
-    //console.log(($('section#about').offset().top) + (($('section#about').height()) / 2) - 100);
-    // })
+    //$('.main-logo').on('click', function(e){
+      //e.preventDefault();
+      //$grid.masonry();
+      //console.log(scrolls);
+      // var offset = $('#msgForm').offset().top;
+      // var height = $('#msgForm').height();
+      // var inView = $(window).height();
+      // console.log('offset: ' + offset);
+      // console.log('height: ' + height);
+      // console.log('offset - height: ' + (offset - inView));
+      // console.log(($('section#about').offset().top) + (($('section#about').height()) / 2) - 100);
+    //})
   }
   parallax();
 
