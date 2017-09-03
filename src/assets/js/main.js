@@ -105,8 +105,7 @@ $(function() {
     $(document).on('scroll', function(e){
       var scroll = $(this).scrollTop();
       var inView = $(window).height();
-      // console.log(scroll);
-
+      //console.log(scroll);
       //Hide Sidebar when scroll more than 100px
       if (scroll > 100) {
         $('#sidebar').addClass('retracted');
@@ -161,10 +160,10 @@ $(function() {
 
     //Scrolling debug
     //console.log(scrolls);
-    //$('.main-logo').on('click', function(e){
-      //e.preventDefault();
-      //$grid.masonry();
-      //console.log(scrolls);
+    $('.main-logo').on('click', function(e){
+      e.preventDefault();
+      $grid.masonry();
+      console.log(scrolls);
       // var offset = $('#msgForm').offset().top;
       // var height = $('#msgForm').height();
       // var inView = $(window).height();
@@ -172,7 +171,7 @@ $(function() {
       // console.log('height: ' + height);
       // console.log('offset - height: ' + (offset - inView));
       // console.log(($('section#about').offset().top) + (($('section#about').height()) / 2) - 100);
-    //})
+    })
   }
   parallax();
 
