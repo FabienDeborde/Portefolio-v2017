@@ -725,7 +725,11 @@ section#work {
   @media only screen and (max-width: 992px) {
     section#work .grid .grid-sizer,
     section#work .grid .grid-item {
-      width: calc((100% - 100px) / 3); } }
+      width: calc((100% - 20px) / 2); } }
+  @media only screen and (max-width: 576px) {
+    section#work .grid .grid-sizer,
+    section#work .grid .grid-item {
+      width: calc((100% - 20px)); } }
 
 section#about {
   background-image: url("../img/photos/about-me.jpg");
