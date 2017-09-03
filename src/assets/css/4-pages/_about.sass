@@ -81,3 +81,36 @@ section#about
       transform: scale(15)
     .about-wrapper
       opacity: 1
+
+@media only screen and (max-width: 1200px)
+  section#about
+    font-size: 1rem
+    .circle
+      $h: 400px
+      height: $h
+      width: $h
+      top: 0
+      left: 35%
+
+    .about-wrapper
+      h2
+        font-size: 2.5rem
+      hr
+        margin: 3rem auto
+
+      .wrapper
+        .aboutme p
+          margin: 0.5rem 0
+        .skills
+          margin-bottom: 80px
+          .skill-wrapper
+            width: 40%
+            margin-bottom: 20px
+            &:nth-child(odd)
+              margin-right: 40px
+            .dots
+              margin: 5px 0
+              .dot
+                $rad: 10px
+                height: $rad
+                width: $rad

@@ -109,7 +109,7 @@ aside#sidebar
           .en
             display: none
           .jp
-            display: block
+            display: flex
   footer
     position: absolute
     bottom: 20px
@@ -132,3 +132,159 @@ aside#sidebar
 
     &+main
       margin-left: 120px
+
+
+@media only screen and (max-width: 1200px)
+  aside#sidebar
+    width: 320px
+    header
+      .main-logo
+        width: 40px
+        height: 40px
+      .menu
+        height: 24px
+        width: 30px
+      .menu-icon-wrapper
+        height: 24px
+        width: 30px
+
+    .main-content
+      .blurb
+        h1
+          font-size: 2.2rem
+        h2
+          font-size: 1.2rem
+      nav
+        .menu-item.flex
+          height: 3rem
+          .menu-text
+            font-size: 2rem
+          .menu-icon
+            right: 20px
+            svg
+              width: 30px
+    footer
+      bottom: 10px
+    &.retracted
+      left: -240px
+      header .main-logo
+        top: 20px
+        right: 10px
+      &+main
+        margin-left: 80px
+
+@media only screen and (max-width: 992px)
+  aside#sidebar
+    width: 260px
+    header
+      .main-logo
+        width: 30px
+        height: 30px
+      .menu
+        height: 20px
+        width: 30px
+      .menu-icon-wrapper
+        height: 22px
+        width: 30px
+
+    .main-content
+      .blurb
+        h1
+          font-size: 1.9rem
+        h2
+          font-size: 0.8rem
+        p
+          letter-spacing: 0.8px
+          line-height: 1.6rem
+          margin-top: 2rem
+      nav
+        .menu-item.flex
+          height: 3rem
+          .menu-text
+            font-size: 1.5rem
+          .menu-icon
+            right: 25px
+            svg
+              width: 25px
+    footer
+      bottom: 10px
+    &.retracted
+      left: -180px
+
+@media only screen and (max-width: 768px)
+  aside#sidebar
+    width: 320px
+    header
+      .main-logo
+        width: 40px
+        height: 40px
+      .menu
+        height: 24px
+        width: 30px
+      .menu-icon-wrapper
+        height: 24px
+        width: 30px
+
+    .main-content
+      .blurb
+        h1
+          font-size: 2.2rem
+        h2
+          font-size: 1.2rem
+      nav
+        .menu-item.flex
+          height: 3rem
+          .menu-text
+            font-size: 2rem
+          .menu-icon
+            right: 20px
+            svg
+              width: 30px
+    footer
+      bottom: 10px
+    &.retracted
+      left: -240px
+      header .main-logo
+        top: 20px
+        right: 10px
+      &+main
+        margin-left: 80px
+
+@media only screen and (max-width: 576px)
+  aside#sidebar
+    width: 320px
+    header
+      .main-logo
+        width: 40px
+        height: 40px
+      .menu
+        height: 24px
+        width: 30px
+      .menu-icon-wrapper
+        height: 24px
+        width: 30px
+
+    .main-content
+      .blurb
+        h1
+          font-size: 2.2rem
+        h2
+          font-size: 1.2rem
+      nav
+        .menu-item.flex
+          height: 3rem
+          .menu-text
+            font-size: 2rem
+          .menu-icon
+            right: 20px
+            svg
+              width: 30px
+    footer
+      bottom: 10px
+    &.retracted
+      left: -240px
+      header .main-logo
+        top: 20px
+        right: 10px
+      &+main
+        margin-left: 80px
