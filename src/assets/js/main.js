@@ -110,7 +110,7 @@ $(function() {
       //console.log(scroll);
       //Hide Sidebar when scroll more than 100px
       if ((scroll > 100 && width > 768) || ((scroll >= inView && width <= 768) )) {
-      //if (scroll > 100) {
+        //if (scroll > 100) {
         $('#sidebar').addClass('retracted');
         // $('#sidebar').on('mouseenter', function(){
         //   $('#sidebar').removeClass('retracted');
