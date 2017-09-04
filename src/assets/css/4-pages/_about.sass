@@ -1,10 +1,9 @@
 section#about
   background-image: url('../img/photos/about-me.jpg')
-  background-position: center
+  background-position: center center
   background-size: cover
   background-repeat: no-repeat
   position: relative
-  font-size: 1.2rem
   display: flex
   flex-direction: column
   justify-content: flex-end
@@ -84,26 +83,50 @@ section#about
 
 @media only screen and (max-width: 1200px)
   section#about
-    font-size: 1rem
     .circle
       $h: 400px
       height: $h
       width: $h
-      top: 0
-      left: 35%
-
+      left: 30%
     .about-wrapper
-      h2
-        font-size: 2.5rem
       hr
-        margin: 3rem auto
-
+        margin: 2.5rem auto
       .wrapper
         .aboutme p
-          margin: 0.5rem 0
+          margin: 0.4rem 0
+          font-size: 1.1rem
         .skills
-          margin-bottom: 80px
+          margin-bottom: 70px
           .skill-wrapper
+            width: 40%
+            margin-bottom: 20px
+            &:nth-child(odd)
+              margin-right: 40px
+            .dots
+              margin: 5px 0
+              .dot
+                $rad: 10px
+                height: $rad
+                width: $rad
+
+@media only screen and (max-width: 992px)
+  section#about
+    .circle
+      $h: 400px
+      height: $h
+      width: $h
+      left: 20%
+    .about-wrapper
+      hr
+        margin: 2rem auto
+      .wrapper
+        .aboutme p
+          margin: 0.4rem 0
+          font-size: 1.1rem
+        .skills
+          margin-bottom: 70px
+          .skill-wrapper
+            font-size: 1rem
             width: 40%
             margin-bottom: 20px
             &:nth-child(odd)

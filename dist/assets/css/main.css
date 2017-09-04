@@ -433,11 +433,7 @@ body {
   font-family: 'Raleway', sans-serif;
   background-color: #121f32;
   color: #F8F8F8;
-  /* 各セクションのメインスタイル */
-  /*1200px */
-  /* ９９１px以下のメインフォントサイズ */
-  /* 768px以下のメインフォントサイズ */
-  /* ５７５px以下のメインフォントサイズ */ }
+  /* 各セクションのメインスタイル */ }
   body .wrapper {
     position: relative;
     width: 70%;
@@ -487,7 +483,6 @@ body {
   body main {
     transition: all 300ms ease-in-out;
     margin-left: 420px;
-    background-color: lightblue;
     /* セクションのタイトル　（色、位置、サイズ） */ }
     body main section {
       width: 100%;
@@ -495,32 +490,40 @@ body {
       background-color: #121f32; }
       body main section h2 {
         font-size: 3rem; }
-  @media only screen and (max-width: 1200px) {
-    body {
-      font-size: 14px; }
-      body .social-container {
-        margin-top: 40px; }
-        body .social-container a:nth-child(2) {
-          margin: 0 20px; }
-        body .social-container a img {
-          width: 40px;
-          height: auto; }
-      body main {
-        margin-left: 320px; } }
-  @media only screen and (max-width: 992px) {
-    body {
-      font-size: 12px; }
-      body main {
-        margin-left: 260px; } }
-  @media only screen and (max-width: 768px) {
-    body {
-      font-size: 13px; }
-      body main {
-        margin-left: 0px;
-        padding-top: 100vh; } }
-  @media only screen and (max-width: 576px) {
-    body {
-      font-size: 12px; } }
+
+/*1200px */
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 14px; }
+  .social-container {
+    margin-top: 40px; }
+    .social-container a:nth-child(2) {
+      margin: 0 20px; }
+    .social-container a img {
+      width: 40px;
+      height: auto; }
+  main {
+    margin-left: 320px; } }
+
+/* ９９１px以下のメインフォントサイズ */
+@media only screen and (max-width: 992px) {
+  html {
+    font-size: 12px; }
+  main {
+    margin-left: 260px; } }
+
+/* 768px以下のメインフォントサイズ */
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 13px; }
+  main {
+    margin-left: 0px;
+    padding-top: 100vh; } }
+
+/* ５７５px以下のメインフォントサイズ */
+@media only screen and (max-width: 576px) {
+  html {
+    font-size: 12px; } }
 
 a {
   text-decoration: none;
@@ -701,9 +704,9 @@ aside#sidebar {
       height: 24px;
       width: 30px; }
     aside#sidebar .main-content .blurb h1 {
-      font-size: 2.2rem; }
+      font-size: 2.4rem; }
     aside#sidebar .main-content .blurb h2 {
-      font-size: 1.2rem; }
+      font-size: 1.4rem; }
     aside#sidebar .main-content nav .menu-item.flex {
       height: 3rem; }
       aside#sidebar .main-content nav .menu-item.flex .menu-text {
@@ -735,13 +738,14 @@ aside#sidebar {
       height: 22px;
       width: 30px; }
     aside#sidebar .main-content .blurb h1 {
-      font-size: 1.9rem; }
+      font-size: 2.2rem; }
     aside#sidebar .main-content .blurb h2 {
-      font-size: 0.8rem; }
+      font-size: 1.2rem; }
     aside#sidebar .main-content .blurb p {
-      letter-spacing: 0.8px;
-      line-height: 1.6rem;
-      margin-top: 2rem; }
+      letter-spacing: 1px;
+      line-height: 1.7rem;
+      margin-top: 2rem;
+      font-size: 1.1rem; }
     aside#sidebar .main-content nav .menu-item.flex {
       height: 3rem; }
       aside#sidebar .main-content nav .menu-item.flex .menu-text {
@@ -775,12 +779,12 @@ aside#sidebar {
       height: 24px;
       width: 30px; }
     aside#sidebar .main-content .blurb h1 {
-      font-size: 2.2rem; }
+      font-size: 2.8rem; }
     aside#sidebar .main-content .blurb h2 {
-      font-size: 1.2rem; }
+      font-size: 1.8rem; }
     aside#sidebar .main-content .blurb p {
-      font-size: 1rem;
-      line-height: 1.8rem; }
+      font-size: 1.2rem;
+      line-height: 2rem; }
     aside#sidebar .main-content nav .menu-item.flex .menu-text {
       font-size: 2rem; }
     aside#sidebar .main-content nav .menu-item.flex .menu-icon {
@@ -819,13 +823,13 @@ aside#sidebar {
   aside#sidebar .main-content {
     margin-top: 2rem; }
     aside#sidebar .main-content .blurb h1 {
-      font-size: 2.2rem; }
+      font-size: 2.6rem; }
     aside#sidebar .main-content .blurb h2 {
-      font-size: 1.2rem; }
+      font-size: 1.6rem; }
     aside#sidebar .main-content .blurb p {
-      font-size: 0.8rem;
-      line-height: 1.6rem;
-      margin-top: 1rem; }
+      font-size: 1.1rem;
+      line-height: 2rem;
+      margin-top: 1.2rem; }
     aside#sidebar .main-content nav .menu-item.flex .menu-text {
       font-size: 2rem; }
     aside#sidebar .main-content nav .menu-item.flex .menu-icon {
@@ -930,11 +934,10 @@ section#work {
 
 section#about {
   background-image: url("../img/photos/about-me.jpg");
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  font-size: 1.2rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -1008,31 +1011,51 @@ section#about {
     opacity: 1; }
 
 @media only screen and (max-width: 1200px) {
-  section#about {
-    font-size: 1rem; }
-    section#about .circle {
-      height: 400px;
-      width: 400px;
-      top: 0;
-      left: 35%; }
-    section#about .about-wrapper h2 {
-      font-size: 2.5rem; }
-    section#about .about-wrapper hr {
-      margin: 3rem auto; }
-    section#about .about-wrapper .wrapper .aboutme p {
-      margin: 0.5rem 0; }
-    section#about .about-wrapper .wrapper .skills {
-      margin-bottom: 80px; }
-      section#about .about-wrapper .wrapper .skills .skill-wrapper {
-        width: 40%;
-        margin-bottom: 20px; }
-        section#about .about-wrapper .wrapper .skills .skill-wrapper:nth-child(odd) {
-          margin-right: 40px; }
-        section#about .about-wrapper .wrapper .skills .skill-wrapper .dots {
-          margin: 5px 0; }
-          section#about .about-wrapper .wrapper .skills .skill-wrapper .dots .dot {
-            height: 10px;
-            width: 10px; } }
+  section#about .circle {
+    height: 400px;
+    width: 400px;
+    left: 30%; }
+  section#about .about-wrapper hr {
+    margin: 2.5rem auto; }
+  section#about .about-wrapper .wrapper .aboutme p {
+    margin: 0.4rem 0;
+    font-size: 1.1rem; }
+  section#about .about-wrapper .wrapper .skills {
+    margin-bottom: 70px; }
+    section#about .about-wrapper .wrapper .skills .skill-wrapper {
+      width: 40%;
+      margin-bottom: 20px; }
+      section#about .about-wrapper .wrapper .skills .skill-wrapper:nth-child(odd) {
+        margin-right: 40px; }
+      section#about .about-wrapper .wrapper .skills .skill-wrapper .dots {
+        margin: 5px 0; }
+        section#about .about-wrapper .wrapper .skills .skill-wrapper .dots .dot {
+          height: 10px;
+          width: 10px; } }
+
+@media only screen and (max-width: 992px) {
+  section#about .circle {
+    height: 400px;
+    width: 400px;
+    left: 20%; }
+  section#about .about-wrapper hr {
+    margin: 2rem auto; }
+  section#about .about-wrapper .wrapper .aboutme p {
+    margin: 0.4rem 0;
+    font-size: 1.1rem; }
+  section#about .about-wrapper .wrapper .skills {
+    margin-bottom: 70px; }
+    section#about .about-wrapper .wrapper .skills .skill-wrapper {
+      font-size: 1rem;
+      width: 40%;
+      margin-bottom: 20px; }
+      section#about .about-wrapper .wrapper .skills .skill-wrapper:nth-child(odd) {
+        margin-right: 40px; }
+      section#about .about-wrapper .wrapper .skills .skill-wrapper .dots {
+        margin: 5px 0; }
+        section#about .about-wrapper .wrapper .skills .skill-wrapper .dots .dot {
+          height: 10px;
+          width: 10px; } }
 
 section#contact {
   position: relative;
