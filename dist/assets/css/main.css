@@ -928,15 +928,16 @@ section.work {
             width: 100%; }
             section.work .grid .grid-item:hover .hover-wrapper .hover-content h4 {
               text-align: center;
-              font-size: 1.2rem;
+              font-size: 1rem;
               margin: 0; }
             section.work .grid .grid-item:hover .hover-wrapper .hover-content hr {
-              width: 75%; }
+              width: 75%;
+              margin: 0.3rem auto; }
             section.work .grid .grid-item:hover .hover-wrapper .hover-content .content {
               -ms-flex-pack: center;
               justify-content: center;
               margin: 0;
-              font-size: 0.9rem; }
+              font-size: 0.7em; }
       section.work .grid .grid-item.active {
         position: absolute;
         left: 50% !important;
