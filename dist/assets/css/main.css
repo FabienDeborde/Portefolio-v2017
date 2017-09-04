@@ -969,33 +969,37 @@ section.work {
       section.work .grid .grid-item.active {
         width: 70%;
         max-width: 70%; }
-        section.work .grid .grid-sizer.active .hover-wrapper,
-        section.work .grid .grid-item.active .hover-wrapper {
-          display: block !important;
+      section.work .grid .grid-sizer:hover,
+      section.work .grid .grid-item:hover {
+        transform: scale(1); }
+        section.work .grid .grid-sizer:hover .hover-wrapper,
+        section.work .grid .grid-item:hover .hover-wrapper {
+          display: -ms-flexbox !important;
+          display: flex !important;
           position: absolute;
           top: 0;
           bottom: 0;
           left: 0;
           right: 0;
           background-color: rgba(0, 0, 0, 0.5); }
-          section.work .grid .grid-sizer.active .hover-wrapper .hover-content,
-          section.work .grid .grid-item.active .hover-wrapper .hover-content {
-            position: absolute;
-            bottom: 20px;
+          section.work .grid .grid-sizer:hover .hover-wrapper .hover-content,
+          section.work .grid .grid-item:hover .hover-wrapper .hover-content {
             padding: 0 10px;
             box-sizing: border-box;
             z-index: 50;
             width: 100%; }
-            section.work .grid .grid-sizer.active .hover-wrapper .hover-content h4,
-            section.work .grid .grid-item.active .hover-wrapper .hover-content h4 {
+            section.work .grid .grid-sizer:hover .hover-wrapper .hover-content h4,
+            section.work .grid .grid-item:hover .hover-wrapper .hover-content h4 {
               text-align: center;
               font-size: 1.6rem;
               margin: 0; }
-            section.work .grid .grid-sizer.active .hover-wrapper .hover-content hr,
-            section.work .grid .grid-item.active .hover-wrapper .hover-content hr {
+            section.work .grid .grid-sizer:hover .hover-wrapper .hover-content hr,
+            section.work .grid .grid-item:hover .hover-wrapper .hover-content hr {
               width: 75%; }
-            section.work .grid .grid-sizer.active .hover-wrapper .hover-content p,
-            section.work .grid .grid-item.active .hover-wrapper .hover-content p {
+            section.work .grid .grid-sizer:hover .hover-wrapper .hover-content .content,
+            section.work .grid .grid-item:hover .hover-wrapper .hover-content .content {
+              -ms-flex-pack: center;
+              justify-content: center;
               margin: 0;
               font-size: 1.2rem; }
       section.work .grid .grid-sizer:hover .hover-wrapper,
@@ -1004,14 +1008,16 @@ section.work {
   @media only screen and (max-width: 576px) {
     section.work {
       padding-bottom: 2rem; }
-      section.work .grid .grid-sizer,
-      section.work .grid .grid-item {
-        width: 100%; }
-        section.work .grid .grid-sizer.active,
-        section.work .grid .grid-item.active {
-          width: 100%;
-          max-width: 100%;
-          transform: translateX(-50%); } }
+      section.work .grid {
+        width: 100% !important; }
+        section.work .grid .grid-sizer,
+        section.work .grid .grid-item {
+          width: 100%; }
+          section.work .grid .grid-sizer.active,
+          section.work .grid .grid-item.active {
+            width: 100%;
+            max-width: 100%;
+            transform: translateX(-50%); } }
 
 section#about {
   background-image: url("../img/photos/about-me.webp");

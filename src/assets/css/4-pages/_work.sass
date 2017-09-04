@@ -103,8 +103,10 @@ section.work
         &.active
           width: 70%
           max-width: 70%
+        &:hover
+          transform: scale(1)
           .hover-wrapper
-            display: block!important
+            display: flex!important
             position: absolute
             top: 0
             bottom: 0
@@ -112,8 +114,6 @@ section.work
             right: 0
             background-color: rgba(0,0,0,0.5)
             .hover-content
-              position: absolute
-              bottom: 20px
               padding: 0 10px
               box-sizing: border-box
               z-index: 50
@@ -124,7 +124,8 @@ section.work
                 margin: 0
               hr
                 width: 75%
-              p
+              .content
+                justify-content: center
                 margin: 0
                 font-size: 1.2rem
         &:hover
@@ -134,6 +135,7 @@ section.work
   @media only screen and (max-width: 576px)
     padding-bottom: 2rem
     .grid
+      width: 100%!important
       .grid-sizer,
       .grid-item
         width: 100%
