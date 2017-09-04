@@ -41,17 +41,17 @@ section.work
       &:hover
         transform: scale(1.01)
         .hover-wrapper
-          display: block
+          display: flex
+          justify-content: center
+          align-items: center
           position: absolute
           top: 0
           bottom: 0
           left: 0
           right: 0
-          background-color: rgba(0,0,0,0.5)
+          background-color: rgba(0,0,0,0.6)
           z-index: 1
           .hover-content
-            position: absolute
-            bottom: 20px
             padding: 0 10px
             box-sizing: border-box
             z-index: 50
@@ -62,9 +62,10 @@ section.work
               margin: 0
             hr
               width: 75%
-            p
+            .content
+              justify-content: center
               margin: 0
-              font-size: 1rem
+              font-size: 0.9rem
 
       &.active
         position: absolute

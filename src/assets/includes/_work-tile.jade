@@ -1,0 +1,9 @@
+mixin work-tile(title, text, secondLine)
+  .hover-wrapper
+    .hover-content 
+      h4=title
+      hr
+      .content.flex=text
+        if secondLine
+          br
+          =secondLine

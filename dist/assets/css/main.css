@@ -908,17 +908,20 @@ section.work {
       section.work .grid .grid-item:hover {
         transform: scale(1.01); }
         section.work .grid .grid-item:hover .hover-wrapper {
-          display: block;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -ms-flex-align: center;
+          align-items: center;
           position: absolute;
           top: 0;
           bottom: 0;
           left: 0;
           right: 0;
-          background-color: rgba(0, 0, 0, 0.5);
+          background-color: rgba(0, 0, 0, 0.6);
           z-index: 1; }
           section.work .grid .grid-item:hover .hover-wrapper .hover-content {
-            position: absolute;
-            bottom: 20px;
             padding: 0 10px;
             box-sizing: border-box;
             z-index: 50;
@@ -929,9 +932,11 @@ section.work {
               margin: 0; }
             section.work .grid .grid-item:hover .hover-wrapper .hover-content hr {
               width: 75%; }
-            section.work .grid .grid-item:hover .hover-wrapper .hover-content p {
+            section.work .grid .grid-item:hover .hover-wrapper .hover-content .content {
+              -ms-flex-pack: center;
+              justify-content: center;
               margin: 0;
-              font-size: 1rem; }
+              font-size: 0.9rem; }
       section.work .grid .grid-item.active {
         position: absolute;
         left: 50% !important;
@@ -1009,7 +1014,7 @@ section.work {
           transform: translateX(-50%); } }
 
 section#about {
-  background-image: url("../img/photos/about-me.jpg");
+  background-image: url("../img/photos/about-me.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
