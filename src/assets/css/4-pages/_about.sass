@@ -46,6 +46,7 @@ section#about
     .wrapper
       .aboutme p
         margin: 0.5rem 0
+        font-size: 1.1rem
       .skills
         margin-bottom: 80px
         flex-wrap: wrap
@@ -94,18 +95,17 @@ section#about
       .wrapper
         .aboutme p
           margin: 0.4rem 0
-          font-size: 1.1rem
         .skills
           margin-bottom: 70px
           .skill-wrapper
-            width: 40%
+            width: 35%
             margin-bottom: 20px
             &:nth-child(odd)
               margin-right: 40px
             .dots
               margin: 5px 0
               .dot
-                $rad: 10px
+                $rad: 8px
                 height: $rad
                 width: $rad
 
@@ -122,18 +122,73 @@ section#about
       .wrapper
         .aboutme p
           margin: 0.4rem 0
-          font-size: 1.1rem
+          font-size: 1.2rem
+          letter-spacing: 1px
         .skills
           margin-bottom: 70px
           .skill-wrapper
-            font-size: 1rem
-            width: 40%
+            font-size: 1.1rem
+            width: 38%
             margin-bottom: 20px
             &:nth-child(odd)
               margin-right: 40px
             .dots
               margin: 5px 0
               .dot
-                $rad: 10px
+                $rad: 8px
+                height: $rad
+                width: $rad
+
+@media only screen and (max-width: 768px)
+  section#about
+    .circle
+      $h: 350px
+      height: $h
+      width: $h
+      left: 10%
+      top: 2%
+    .about-wrapper
+      .wrapper
+        .aboutme p
+          margin: 0.5rem 0
+          font-size: 1.1rem
+          letter-spacing: 1.1px
+        .skills
+          margin-bottom: 50px
+          .skill-wrapper
+            font-size: 1rem
+            width: 42%
+            margin-bottom: 20px
+            &:nth-child(odd)
+              margin-right: 30px
+
+@media only screen and (max-width: 575px)
+  section#about
+    .circle
+      $h: 250px
+      height: $h
+      width: $h
+      left: 0%
+      top: 2%
+    .about-wrapper
+      hr
+        margin: 1.5rem auto
+      .wrapper
+        .aboutme p
+          margin: 0.4rem 0
+          font-size: 1rem
+          letter-spacing: 1px
+        .skills
+          margin-bottom: 20px
+          .skill-wrapper
+            font-size: 0.8rem
+            width: 45%
+            margin-bottom: 20px
+            &:nth-child(odd)
+              margin-right: 20px
+            .dots
+              margin: 5px 0
+              .dot
+                $rad: 5px
                 height: $rad
                 width: $rad

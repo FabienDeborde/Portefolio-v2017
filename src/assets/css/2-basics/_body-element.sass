@@ -75,33 +75,39 @@ body
 @media only screen and (max-width: 1200px)
   html
     font-size: 14px
-  .social-container
-    margin-top: 40px
-    a
-      &:nth-child(2)
-        margin: 0 20px
-      img
-        width: 40px
-        height: auto
-  main
-    margin-left: 320px
+    .social-container
+      margin-top: 40px
+      a
+        &:nth-child(2)
+          margin: 0 20px
+        img
+          width: 40px
+          height: auto
+    main
+      margin-left: 320px
 /* ９９１px以下のメインフォントサイズ
 @media only screen and (max-width: 992px)
   html
     font-size: 12px
-  main
-    margin-left: 260px
+    main
+      margin-left: 260px
 
 /* 768px以下のメインフォントサイズ
 @media only screen and (max-width: 768px)
   html
     font-size: 13px
-  main
-    //margin-top: 100vh
-    margin-left: 0px
-    padding-top: 100vh
+    body
+      .wrapper
+        width: 80%
+      main
+        //margin-top: 100vh
+        margin-left: 0px
+        padding-top: 100vh
 
 /* ５７５px以下のメインフォントサイズ
 @media only screen and (max-width: 576px)
   html
     font-size: 12px
+    body
+      .wrapper
+        width: 90%

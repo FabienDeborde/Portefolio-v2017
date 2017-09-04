@@ -12,7 +12,11 @@ $(function() {
   var emailInput = $('#email');
   var msgInput = $('#msg');
   var submitBtn = $('#submit');
-  var scrolls = {}
+  var scrolls = {};
+  var gridItemWidth = function(col){
+    var gridWidth = $('main').width();
+    return (gridWidth / col) - (20 * (col - 1));
+  };
 
   ////////////////////////
   // Smooth Scrolling
@@ -32,7 +36,7 @@ $(function() {
     percentPosition: true,
     fitWidth: true,
     gutter: 20,
-    columnWidth: '.grid-sizer'
+    columnWidth: 60
   });
   // layout Masonry after each image loads
   $grid.imagesLoaded().progress( function() {
@@ -166,7 +170,7 @@ $(function() {
     $('.main-logo').on('click', function(e){
       e.preventDefault();
       $grid.masonry();
-      console.log(scrolls);
+      console.log(gridItemWidth(2));
       // var offset = $('#msgForm').offset().top;
       // var height = $('#msgForm').height();
       // var inView = $(window).height();
