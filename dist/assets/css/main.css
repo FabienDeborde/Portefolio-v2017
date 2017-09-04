@@ -483,6 +483,7 @@ body {
   body main {
     transition: all 300ms ease-in-out;
     margin-left: 420px;
+    overflow: hidden;
     /* セクションのタイトル　（色、位置、サイズ） */ }
     body main section {
       width: 100%;
@@ -519,8 +520,16 @@ body {
     html body .wrapper {
       width: 80%; }
     html body main {
-      margin-left: 0px;
-      padding-top: 100vh; } }
+      margin-left: 0px; }
+      html body main h2 {
+        font-size: 2.5rem;
+        margin: 1rem auto; }
+    html body .social-container {
+      margin-top: 50px; }
+      html body .social-container a:nth-child(2) {
+        margin: 0 30px; }
+      html body .social-container a img {
+        width: 40px; } }
 
 /* ５７５px以下のメインフォントサイズ */
 @media only screen and (max-width: 576px) {
@@ -578,7 +587,7 @@ aside#sidebar {
   height: 100vh;
   transition: all 300ms ease-in-out;
   left: 0;
-  background-color: #121f32; }
+  overflow: hidden; }
   aside#sidebar header {
     padding: 20px;
     position: relative; }
@@ -917,10 +926,12 @@ section#work {
     section#work .grid .grid-item {
       width: calc((100% - 20px) / 2); } }
   @media only screen and (max-width: 768px) {
-    section#work .grid .grid-sizer.active,
-    section#work .grid .grid-item.active {
-      width: 70%;
-      max-width: 70%; } }
+    section#work {
+      padding-top: 100vh; }
+      section#work .grid .grid-sizer.active,
+      section#work .grid .grid-item.active {
+        width: 70%;
+        max-width: 70%; } }
   @media only screen and (max-width: 576px) {
     section#work .grid .grid-sizer,
     section#work .grid .grid-item {
@@ -1154,3 +1165,35 @@ section#contact {
     opacity: 1; }
   section#contact.nojs form textarea {
     transform: none; }
+
+@media only screen and (max-width: 992px) {
+  section#contact .social-container.flex.justify-center.v-align-center {
+    padding-bottom: 10px; }
+    section#contact .social-container.flex.justify-center.v-align-center a img {
+      width: 60px; } }
+
+@media only screen and (max-width: 575px) {
+  section#contact .message {
+    font-size: 1rem; }
+  section#contact #submit-success, section#contact #submit-error {
+    font-size: 1.1rem; }
+  section#contact form {
+    margin: 40px 0; }
+    section#contact form .contact-info {
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    section#contact form input#name {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: auto; }
+    section#contact form input#submit {
+      display: block;
+      width: 80%;
+      max-width: 80%; }
+    section#contact form textarea {
+      margin: 20px 0 30px 0; }
+  section#contact .social-container.flex.justify-center.v-align-center {
+    padding-bottom: 10px;
+    margin-top: 30px; }
+    section#contact .social-container.flex.justify-center.v-align-center a img {
+      width: 40px; } }

@@ -55,3 +55,41 @@ section#contact
           opacity: 1
       textarea
         transform: none
+
+@media only screen and (max-width: 992px)
+  section#contact
+    .social-container.flex.justify-center.v-align-center
+      padding-bottom: 10px
+      a
+        img
+          width: 60px
+
+@media only screen and (max-width: 575px)
+  section#contact
+    .message
+      font-size: 1rem
+    #submit-success, #submit-error
+      font-size: 1.1rem
+    form
+      // display: flex
+      // flex-direction: column
+      margin: 40px 0
+      .contact-info
+        flex-direction: column
+      input
+        &#name
+          margin-right: 0
+          margin-bottom: 20px
+          width: auto
+        &#submit
+          display: block
+          width: 80%
+          max-width: 80%
+      textarea
+        margin: 20px 0 30px 0
+    .social-container.flex.justify-center.v-align-center
+      padding-bottom: 10px
+      margin-top: 30px
+      a
+        img
+          width: 40px
