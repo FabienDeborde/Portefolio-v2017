@@ -593,9 +593,7 @@ aside#sidebar {
     position: relative; }
     aside#sidebar header .main-logo {
       width: 60px;
-      height: 60px;
-      padding: 10px;
-      border-radius: 50%; }
+      height: 60px; }
       aside#sidebar header .main-logo img {
         width: 100%;
         height: auto; }
@@ -707,8 +705,8 @@ aside#sidebar {
   aside#sidebar {
     width: 320px; }
     aside#sidebar header .main-logo {
-      width: 40px;
-      height: 40px; }
+      width: 50px;
+      height: 50px; }
     aside#sidebar header .menu {
       height: 24px;
       width: 30px; }
@@ -741,8 +739,8 @@ aside#sidebar {
   aside#sidebar {
     width: 260px; }
     aside#sidebar header .main-logo {
-      width: 30px;
-      height: 30px; }
+      width: 50px;
+      height: 50px; }
     aside#sidebar header .menu {
       height: 20px;
       width: 30px; }
@@ -782,8 +780,8 @@ aside#sidebar {
     top: 0;
     right: 0; }
     aside#sidebar header .main-logo {
-      width: 40px;
-      height: 40px; }
+      width: 50px;
+      height: 50px; }
     aside#sidebar header .menu {
       height: 24px;
       width: 30px; }
@@ -811,8 +809,8 @@ aside#sidebar {
       position: fixed;
       left: calc(-100% + 50px); }
       aside#sidebar.retracted header .main-logo {
-        width: 20px;
-        height: 20px;
+        width: 40px;
+        height: 40px;
         right: 7px; }
       aside#sidebar.retracted .main-content nav .menu-item.flex .menu-icon {
         position: absolute;
@@ -822,15 +820,15 @@ aside#sidebar {
 
 @media only screen and (max-width: 576px) {
   aside#sidebar header .main-logo {
-    width: 30px;
-    height: 30px; }
+    width: 50px;
+    height: 50px; }
   aside#sidebar header .menu {
-    height: 20px;
+    height: 25px;
     width: 30px; }
     aside#sidebar header .menu:hover + .menu-icon-wrapper .bar {
       background-color: #F8F8F8; }
   aside#sidebar header .menu-icon-wrapper {
-    height: 20px;
+    height: 25px;
     width: 30px; }
   aside#sidebar .main-content {
     margin-top: 2rem; }
@@ -856,8 +854,8 @@ aside#sidebar {
     position: fixed;
     left: calc(-100% + 40px); }
     aside#sidebar.retracted header .main-logo {
-      width: 15px;
-      height: 15px;
+      width: 35px;
+      height: 35px;
       right: 3px; }
     aside#sidebar.retracted .main-content nav .menu-item.flex .menu-icon {
       position: absolute;
