@@ -213,7 +213,15 @@ aside#sidebar
 
 @media only screen and (max-width: 768px)
   aside#sidebar
-    width: 320px
+    transition: none
+    position: absolute
+    display: block
+    width: 100%
+    height: auto
+    min-height: 100vh
+    top: 0
+    right: 0
+
     header
       .main-logo
         width: 40px
@@ -231,60 +239,88 @@ aside#sidebar
           font-size: 2.2rem
         h2
           font-size: 1.2rem
+        p
+          font-size: 1rem
+          line-height: 1.8rem
       nav
         .menu-item.flex
-          height: 3rem
           .menu-text
             font-size: 2rem
           .menu-icon
-            right: 20px
+            position: relative
+            right: 0px
+            margin-left: 25px
             svg
               width: 30px
     footer
-      bottom: 10px
+      bottom: 20px
     &.retracted
-      left: -240px
-      header .main-logo
-        top: 20px
-        right: 10px
+      position: fixed
+      left: calc(-100% + 50px)
+      header
+        .main-logo
+          width: 20px
+          height: 20px
+          right: 7px
+      .main-content nav .menu-item.flex .menu-icon
+        position: absolute
+        right: 12px
+
       &+main
-        margin-left: 80px
+        margin-left: 50px
 
 @media only screen and (max-width: 576px)
   aside#sidebar
-    width: 320px
     header
       .main-logo
-        width: 40px
-        height: 40px
-      .menu
-        height: 24px
         width: 30px
+        height: 30px
+      .menu
+        height: 20px
+        width: 30px
+        &:hover
+          &+.menu-icon-wrapper .bar
+            background-color: $white
       .menu-icon-wrapper
-        height: 24px
+        height: 20px
         width: 30px
 
     .main-content
+      margin-top: 2rem
       .blurb
         h1
           font-size: 2.2rem
         h2
           font-size: 1.2rem
+        p
+          font-size: 0.8rem
+          line-height: 1.6rem
+          margin-top: 1rem
       nav
         .menu-item.flex
-          height: 3rem
           .menu-text
             font-size: 2rem
           .menu-icon
-            right: 20px
+            position: relative
+            right: 0px
+            margin-left: 25px
             svg
               width: 30px
     footer
-      bottom: 10px
+      bottom: 20px
     &.retracted
-      left: -240px
-      header .main-logo
-        top: 20px
-        right: 10px
+      position: fixed
+      left: calc(-100% + 40px)
+      header
+        .main-logo
+          width: 15px
+          height: 15px
+          right: 3px
+      .main-content nav .menu-item.flex .menu-icon
+        position: absolute
+        right: 7px
+        svg
+          width: 25px
+
       &+main
-        margin-left: 80px
+        margin-left: 40px
