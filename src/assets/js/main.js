@@ -13,10 +13,6 @@ $(function() {
   var msgInput = $('#msg');
   var submitBtn = $('#submit');
   var scrolls = {};
-  var gridItemWidth = function(col){
-    var gridWidth = $('main').width();
-    return (gridWidth / col) - (20 * (col - 1));
-  };
 
   ////////////////////////
   // Smooth Scrolling
@@ -36,7 +32,7 @@ $(function() {
     percentPosition: true,
     fitWidth: true,
     gutter: 20,
-    columnWidth: 60
+    columnWidth: '.grid-sizer'
   });
   // layout Masonry after each image loads
   $grid.imagesLoaded().progress( function() {
@@ -51,13 +47,13 @@ $(function() {
     scrolls = {
       about : (about.offset().top) - (about.height()) + offset * 2,
       aboutEnd : (about.offset().top + about.height()) - 50,
-      dot1 : (html.offset().top) - inView + offset * 0.75,
-      dot2 : (webdev.offset().top) - inView + offset * 0.75,
-      dot3 : (learning.offset().top) - inView + offset * 0.75,
+      dot1 : (html.offset().top) - inView + offset * 0,
+      dot2 : (webdev.offset().top) - inView + offset * 0,
+      dot3 : (learning.offset().top) - inView + offset * 0,
       form : msgForm.offset().top - inView,
       name : nameInput.offset().top - inView + offset,
       msg : nameInput.offset().top - inView + offset + nameInput.height(),
-      submit : submitBtn.offset().top - inView + offset/2,
+      submit : submitBtn.offset().top - inView + offset/3,
     }
     // Manage active links while scrolling
     gumshoe.init({
@@ -167,18 +163,18 @@ $(function() {
 
     //Scrolling debug
     //console.log(scrolls);
-    $('.main-logo').on('click', function(e){
-      e.preventDefault();
-      $grid.masonry();
-      console.log(gridItemWidth(2));
-      // var offset = $('#msgForm').offset().top;
-      // var height = $('#msgForm').height();
-      // var inView = $(window).height();
-      // console.log('offset: ' + offset);
-      // console.log('height: ' + height);
-      // console.log('offset - height: ' + (offset - inView));
-      // console.log(($('section#about').offset().top) + (($('section#about').height()) / 2) - 100);
-    })
+    // $('.main-logo').on('click', function(e){
+    //   e.preventDefault();
+    //   $grid.masonry();
+    //   console.log(gridItemWidth(2));
+    //   // var offset = $('#msgForm').offset().top;
+    //   // var height = $('#msgForm').height();
+    //   // var inView = $(window).height();
+    //   // console.log('offset: ' + offset);
+    //   // console.log('height: ' + height);
+    //   // console.log('offset - height: ' + (offset - inView));
+    //   // console.log(($('section#about').offset().top) + (($('section#about').height()) / 2) - 100);
+    // })
   }
   parallax();
 
