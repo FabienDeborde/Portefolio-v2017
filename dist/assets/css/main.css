@@ -871,7 +871,7 @@ section.work {
   height: auto;
   box-sizing: border-box;
   background-color: #121f32;
-  padding-bottom: 3rem; }
+  padding-bottom: 8rem; }
   section.work h2 {
     position: relative;
     z-index: 1000;
@@ -940,17 +940,22 @@ section.work {
         width: 50%;
         max-width: 50%; }
   @media only screen and (max-width: 1200px) {
-    section.work .grid .grid-sizer,
-    section.work .grid .grid-item {
-      width: calc((100% - 40px) / 3); }
-    section.work .grid .grid-item {
-      margin-bottom: 15px; } }
+    section.work {
+      padding-bottom: 7rem; }
+      section.work .grid .grid-sizer,
+      section.work .grid .grid-item {
+        width: calc((100% - 40px) / 3); }
+      section.work .grid .grid-item {
+        margin-bottom: 15px; } }
   @media only screen and (max-width: 992px) {
-    section.work .grid .grid-sizer,
-    section.work .grid .grid-item {
-      width: calc((100% - 20px) / 2); } }
+    section.work {
+      padding-bottom: 6rem; }
+      section.work .grid .grid-sizer,
+      section.work .grid .grid-item {
+        width: calc((100% - 20px) / 2); } }
   @media only screen and (max-width: 768px) {
     section.work {
+      padding-bottom: 4rem;
       padding-top: 100vh; }
       section.work .grid .grid-sizer .hover-wrapper,
       section.work .grid .grid-item .hover-wrapper {
@@ -992,14 +997,16 @@ section.work {
       section.work .grid .grid-item:hover .hover-wrapper {
         display: none; } }
   @media only screen and (max-width: 576px) {
-    section.work .grid .grid-sizer,
-    section.work .grid .grid-item {
-      width: 100%; }
-      section.work .grid .grid-sizer.active,
-      section.work .grid .grid-item.active {
-        width: 100%;
-        max-width: 100%;
-        transform: translateX(-50%); } }
+    section.work {
+      padding-bottom: 2rem; }
+      section.work .grid .grid-sizer,
+      section.work .grid .grid-item {
+        width: 100%; }
+        section.work .grid .grid-sizer.active,
+        section.work .grid .grid-item.active {
+          width: 100%;
+          max-width: 100%;
+          transform: translateX(-50%); } }
 
 section#about {
   background-image: url("../img/photos/about-me.jpg");
@@ -1132,7 +1139,8 @@ section#about {
     height: 350px;
     width: 350px;
     left: 10%;
-    top: 2%; }
+    top: 2%;
+    box-shadow: 0px 0px 0px 1000px #121f32; }
   section#about .about-wrapper .wrapper .aboutme p {
     margin: 0.5rem 0;
     font-size: 1.1rem;
@@ -1151,7 +1159,8 @@ section#about {
     height: 250px;
     width: 250px;
     left: 0%;
-    top: 2%; }
+    top: 2%;
+    box-shadow: 0px 0px 0px 600px #121f32; }
   section#about .about-wrapper hr {
     margin: 1.5rem auto; }
   section#about .about-wrapper .wrapper .aboutme p {
