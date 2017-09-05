@@ -1019,7 +1019,7 @@ section.work {
           transform: translateX(-50%); } }
 
 section#about {
-  background-image: url("../img/photos/about-me.webp");
+  background-image: url("../img/photos/about-me.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
