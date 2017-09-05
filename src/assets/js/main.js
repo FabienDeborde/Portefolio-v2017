@@ -130,7 +130,7 @@ $(function() {
     $(document).on('scroll', function(e){
       var scroll = $(this).scrollTop();
       var width = $(this).width();
-      console.log(width);
+      //console.log(width);
       var inView = $(window).height();
       //console.log(scroll);
       //Hide Sidebar when scroll more than 100px
