@@ -61,9 +61,34 @@ $(function() {
     });
   });
 
+  var resetGrid = function(item) {
+    var gridArray = $('.grid-item');
+    gridArray.not(item).removeClass('active');
+    var imgArr = $('.grid-item img');
+    $.each(imgArr, function(i){
+      var src = $(imgArr[i]).attr("src");
+      src = src.replace('large', 'small');
+      $(imgArr[i]).attr('src', src);
+    })
+  }
+
+  $(document).on('click', function(e){
+    //console.log(e.target);
+    if ($(event.target).closest('.grid-item').length < 1) {
+      resetGrid();
+    }
+  })
+
   $('.grid-item').on('click', function(){
-    $('.grid-item').not(this).removeClass('active');
+    var src = $(this).find('img').attr("src");
+    resetGrid($(this));
     $(this).toggleClass('active');
+    if ($(this).hasClass('active')) {
+      src = src.replace('small', 'large');
+    } else {
+      src = src.replace('large', 'small');
+    }
+    $(this).find('img').attr("src", src);
   })
 
   ////////////////////////

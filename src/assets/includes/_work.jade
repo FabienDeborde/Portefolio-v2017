@@ -1,53 +1,54 @@
 include ./_work-tile.jade
 section.work.section
   h2#work.text-center.accent-font My Work
-  .grid
-    .grid-sizer
-    .grid-item
-      img(src='./assets/img/screenshots/F45.png' alt='ジャンク雑貨屋のHP' title='')
-      +work-tile('ジャンク雑貨屋のHP', 'パララックスエフェクト入りのシンプルなホームページ。')  
-    .grid-item
-      img(src='./assets/img/screenshots/realEstate.png' alt='不動産屋のHP' title='')
-      +work-tile('不動産屋のHP', '制作会社様からお請けした案件のため、詳細をご紹介できません。')  
-    .grid-item
-      img(src='./assets/img/screenshots/realEstate2.png' alt='広告制作会社のHP' title='')
-      +work-tile('広告制作会社のHP', '制作会社様からお請けした案件のため、詳細をご紹介できません。')  
-    .grid-item
-      img(src='./assets/img/screenshots/realEstate3.png' alt='不動産屋のHP' title='')
-      +work-tile('不動産屋のHP', '制作会社様からお請けした案件のため、詳細をご紹介できません。')  
-    .grid-item
-      img(src='./assets/img/screenshots/realEstate4.png' alt='不動産屋のHP' title='')
-      +work-tile('不動産屋のHP', '制作会社様からお請けした案件のため、詳細をご紹介できません。')  
-    .grid-item
-      img(src='./assets/img/screenshots/Kyo-Zen.png' alt='ゲストハウス不動産屋のHP' title='')
-      +work-tile('ゲストハウスのHP', 'ワードプレスを使用した多言語システムや予約システム入りのホームページ。')  
-    .grid-item
-      img(src='./assets/img/gifs/calculator.gif' alt='電卓' title='')
-      +work-tile('電卓', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
-    .grid-item
-      img(src='./assets/img/gifs/pomodoro-sleek.gif' alt='ポモドロのタイマー' title='')
-      +work-tile('ポモドロのタイマー', '集中サイクルと休憩サイクルの時間を設定できるタイマーです。', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
-    .grid-item
-      img(src='./assets/img/gifs/twitch.gif' alt='Twitch' title='')
-      +work-tile('Twitch', '登録されたストリームの情報をリアルタイムで見ることができます。', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
-    .grid-item
-      img(src='./assets/img/screenshots/weather.png' alt='GPS連動型の天気予報' title='')
-      +work-tile('GPS連動型の天気予報', 'ブラウザのGPS機能から位置を特定し、天気予報を表示します。', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
-    .grid-item
-      img(src='./assets/img/gifs/pomodoro-simple.gif' alt='ポモドロのタイマー' title='')
-      +work-tile('ポモドロのタイマー', '25分間の集中サイクルと5分間の休憩サイクルのシンプルなタイマーです。', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
-    .grid-item
-      img(src='./assets/img/gifs/simon-game.gif' alt='サイモンゲーム' title='')
-      +work-tile('サイモンゲーム', 'コンピュータが示した順番を繰り返して遊ぶゲーム。', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
-    .grid-item
-      img(src='./assets/img/gifs/tictactoe.gif' alt='◯×ゲーム' title='')
-      +work-tile('◯×ゲーム', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
-    .grid-item
-      img(src='./assets/img/screenshots/quote.png' alt='ランダムQuote' title='')
-      +work-tile('ランダムQuote', 'JSONファイルからランダムに引用語を表示するページです。', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
-    .grid-item
-      img(src='./assets/img/gifs/buttons.gif' alt='ボタンスタイル' title='')
-      +work-tile('ボタンスタイル', 'CSSのボタンスタイル見本。ソースコードはGitHubとCodePenをご覧ください。')  
-    .grid-item
-      img(src='./assets/img/gifs/wikiviewer.gif' alt='Wikipedia検索' title='')
-      +work-tile('Wikipedia検索', '検索キーワードから５つの関連ワードのWikipediaページを表示します。ランダム表示機能も作りました。', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
+  .grid-wrapper
+    .grid
+      .grid-sizer
+      .grid-item
+        img(src='./assets/img/screenshots/small/F45.png' alt='ジャンク雑貨屋のHP' title='')
+        +work-tile('ジャンク雑貨屋のHP', 'パララックスエフェクト入りのシンプルなホームページ。')  
+      .grid-item
+        img(src='./assets/img/screenshots/small/realEstate.png' alt='不動産屋のHP' title='')
+        +work-tile('不動産屋のHP', '制作会社様からお請けした案件のため、詳細をご紹介できません。')  
+      .grid-item
+        img(src='./assets/img/screenshots/small/realEstate2.png' alt='広告制作会社のHP' title='')
+        +work-tile('広告制作会社のHP', '制作会社様からお請けした案件のため、詳細をご紹介できません。')  
+      .grid-item
+        img(src='./assets/img/screenshots/small/realEstate3.png' alt='不動産屋のHP' title='')
+        +work-tile('不動産屋のHP', '制作会社様からお請けした案件のため、詳細をご紹介できません。')  
+      .grid-item
+        img(src='./assets/img/screenshots/small/realEstate4.png' alt='不動産屋のHP' title='')
+        +work-tile('不動産屋のHP', '制作会社様からお請けした案件のため、詳細をご紹介できません。')  
+      .grid-item
+        img(src='./assets/img/screenshots/small/Kyo-Zen.png' alt='ゲストハウス不動産屋のHP' title='')
+        +work-tile('ゲストハウスのHP', 'ワードプレスを使用した多言語システムや予約システム入りのホームページ。')  
+      .grid-item
+        img(src='./assets/img/gifs/small/calculator.gif' alt='電卓' title='')
+        +work-tile('電卓', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
+      .grid-item
+        img(src='./assets/img/gifs/small/pomodoro-sleek.gif' alt='ポモドロのタイマー' title='')
+        +work-tile('ポモドロのタイマー', '集中サイクルと休憩サイクルの時間を設定できるタイマーです。', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
+      .grid-item
+        img(src='./assets/img/gifs/small/twitch.gif' alt='Twitch' title='')
+        +work-tile('Twitch', '登録されたストリームの情報をリアルタイムで見ることができます。', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
+      .grid-item
+        img(src='./assets/img/screenshots/small/weather.png' alt='GPS連動型の天気予報' title='')
+        +work-tile('GPS連動型の天気予報', 'ブラウザのGPS機能から位置を特定し、天気予報を表示します。', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
+      .grid-item
+        img(src='./assets/img/gifs/small/pomodoro-simple.gif' alt='ポモドロのタイマー' title='')
+        +work-tile('ポモドロのタイマー', '25分間の集中サイクルと5分間の休憩サイクルのシンプルなタイマーです。', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
+      .grid-item
+        img(src='./assets/img/gifs/small/simon-game.gif' alt='サイモンゲーム' title='')
+        +work-tile('サイモンゲーム', 'コンピュータが示した順番を繰り返して遊ぶゲーム。', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
+      .grid-item
+        img(src='./assets/img/gifs/small/tictactoe.gif' alt='◯×ゲーム' title='')
+        +work-tile('◯×ゲーム', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
+      .grid-item
+        img(src='./assets/img/screenshots/small/quote.png' alt='ランダムQuote' title='')
+        +work-tile('ランダムQuote', 'JSONファイルからランダムに引用語を表示するページです。', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
+      .grid-item
+        img(src='./assets/img/gifs/small/buttons.gif' alt='ボタンスタイル' title='')
+        +work-tile('ボタンスタイル', 'CSSのボタンスタイル見本。ソースコードはGitHubとCodePenをご覧ください。')  
+      .grid-item
+        img(src='./assets/img/gifs/small/wikiviewer.gif' alt='Wikipedia検索' title='')
+        +work-tile('Wikipedia検索', '検索キーワードから５つの関連ワードのWikipediaページを表示します。ランダム表示機能も作りました。', 'JavaScriptで作ったWebアプリ。ソースコードはGitHubとCodePenをご覧ください。')  
