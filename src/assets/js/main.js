@@ -23,9 +23,6 @@ $(function() {
   ////////////////////////
   // Work section
   ////////////////////////
-  // Activate Masonry
-  // Handle click on images, toggle class to give zoom-in effect
-
   // init Masonry
   var $grid = $('.grid').masonry({
     itemSelector: '.grid-item',
@@ -41,9 +38,9 @@ $(function() {
   // Update sections layout infos after Masonry finsihed rearranging images
   // Will update the scrolls value on each masonry update
   $grid.on( 'layoutComplete', function() {
-    //console.log('layout done');
     var inView = $(window).height();
     var offset = 200;
+    // update the offset value of the main elements after each masonry update
     scrolls = {
       about : (about.offset().top) - (about.height()) + offset * 2,
       aboutEnd : (about.offset().top + about.height()) - 50,
@@ -61,6 +58,7 @@ $(function() {
     });
   });
 
+  // Function to reset the grid active state
   var resetGrid = function(item) {
     var gridArray = $('.grid-item');
     gridArray.not(item).removeClass('active');
@@ -72,17 +70,19 @@ $(function() {
     })
   }
 
+  // Reset the grid if click outside the grid items
   $(document).on('click', function(e){
-    //console.log(e.target);
     if ($(event.target).closest('.grid-item').length < 1) {
       resetGrid();
     }
   })
 
+  // Handle the active state of the grid item
   $('.grid-item').on('click', function(){
     var src = $(this).find('img').attr("src");
     resetGrid($(this));
     $(this).toggleClass('active');
+    // Update the src image to the large version when active
     if ($(this).hasClass('active')) {
       src = src.replace('small', 'large');
     } else {
@@ -97,6 +97,7 @@ $(function() {
   // Remove nojs class and active dots
   $('section#about').removeClass('nojs');
   $('section#about .dot').removeClass('active');
+  // Activate the skills dots progressively, until the passed number is reached
   var animateDot = function(el, number) {
       var dots = el.find('.dot');
       dots.each(function(i, el) {
@@ -112,6 +113,7 @@ $(function() {
   // Contact section
   ////////////////////////
   $('section#contact').removeClass('nojs');
+  // Handle the toggle of custom classes for the form parallax effects
   var animateInputs = function() {
     nameInput.addClass('active');
     emailInput.addClass('active');
@@ -128,28 +130,19 @@ $(function() {
   ////////////////////////
   var parallax = function() {
     $(document).on('scroll', function(e){
+      // Get the scroll from the top value, the width of the document and the window height
       var scroll = $(this).scrollTop();
       var width = $(this).width();
-      //console.log(width);
       var inView = $(window).height();
-      //console.log(scroll);
       //Hide Sidebar when scroll more than 100px
       if ((scroll > 100 && width > 768) || ((scroll >= inView && width <= 768) )) {
-        //if (scroll > 100) {
         $('#sidebar').addClass('retracted');
-        // $('#sidebar').on('mouseenter', function(){
-        //   $('#sidebar').removeClass('retracted');
-        // })
-        //
-        // $('#sidebar').on('mouseleave', function(){
-        //   $('#sidebar').addClass('retracted');
-        // })
       } else {
         // Show Sidebar when top of the page
         $('#sidebar').removeClass('retracted');
       }
 
-      // Animate About section between 2700 and 3850 ScrollTop
+      // Animate About section
       if (scroll > scrolls.about && scroll < scrolls.aboutEnd) {
         $('section#about').addClass('unwrapped');
       } else {
@@ -169,12 +162,14 @@ $(function() {
         animateDot($('section#about #organization .dots'), 8);
         animateDot($('section#about #learning .dots'), 10);
       }
+      // Reset form parallax effect when form is out of view
       if (scroll < scrolls.form) {
         nameInput.removeClass('active');
         emailInput.removeClass('active');
         msgInput.removeClass('active');
         submitBtn.removeClass('active');
       }
+      // Animate the form inputs
       if (scroll > scrolls.name) {
         animateInputs();
       }
@@ -185,22 +180,7 @@ $(function() {
         animateBtn();
       }
     })
-
-    //Scrolling debug
-    //console.log(scrolls);
-    // $('.main-logo').on('click', function(e){
-    //   e.preventDefault();
-    //   $grid.masonry();
-    //   console.log(gridItemWidth(2));
-    //   // var offset = $('#msgForm').offset().top;
-    //   // var height = $('#msgForm').height();
-    //   // var inView = $(window).height();
-    //   // console.log('offset: ' + offset);
-    //   // console.log('height: ' + height);
-    //   // console.log('offset - height: ' + (offset - inView));
-    //   // console.log(($('section#about').offset().top) + (($('section#about').height()) / 2) - 100);
-    // })
-  }
+  };
   parallax();
 
 
