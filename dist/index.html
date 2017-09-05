@@ -409,7 +409,7 @@
           </div>
           <div class="hidden" id="submit-success">Thank you! Your message has been sent!</div>
           <div class="hidden" id="submit-error">An error occured. Please try again later.</div>
-          <form id="msgForm">
+          <form id="msgForm" method="post" action="/server-assets/private-mailer.php">
             <div class="contact-info row flex">
               <input id="name" type="text" name="name" placeholder="Your name"/>
               <input id="email" type="email" name="email" placeholder="Your email"/>

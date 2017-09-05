@@ -7,7 +7,7 @@ section#contact.flex.justify-center.v-align-center.section.nojs
       
     #submit-success.hidden Thank you! Your message has been sent!
     #submit-error.hidden An error occured. Please try again later.
-    form(id="msgForm")
+    form(id="msgForm" method="post" action="/server-assets/private-mailer.php")
       .contact-info.row.flex
         input#name(type="text" name="name" placeholder="Your name")
         input#email(type="email" name="email" placeholder="Your email")
